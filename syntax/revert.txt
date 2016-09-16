@@ -1,0 +1,125 @@
+revert.txt
+Created Wed May 18 09:26:47 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Reset or revert a specific file to a specific revision using Git?
+=================================================================
+Assuming the commit you want is abcde:
+
+git checkout abcde file/to/restore
+The git checkout man page gives more information.
+
+Note if you want to revert changes made to the files in commit abcde you have
+to pass the commit right before abcde. You can use abcde~1 for this.
+
+As a side note, I've always been uncomfortable with this command because it's
+used for both ordinary things (changing between branches) and unusual
+destructive things (discarding changes in the working directory).
+
+Hence:
+    $ git log file/to/restore
+    Get the commit number like:
+    $ git checkout 5ed4f0c3ac0be7e92b606dee297285b025c068e5 generatorAlarms.go
+    $ git commit
+    $ git status
+
+
+Example
+=======
+To revert last commit in the ???
+
+1. Get prior revision history:
+covellite:~/git/private/gci/projects/syniverse/jobs$ git log jobs.xlsx
+commit 8a5dd296b2f0aeab91a379cb417b88581c6916c3
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Fri May 13 10:36:16 2016 -0800
+
+    Updated with data that Whit Reeve added in my absencee due to annual leave
+    the last week of April and first week of may.
+
+commit a02bc11e0e83df89110891714a62a9f75e3603f2
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Mon Apr 4 08:48:10 2016 -0800
+
+    jobs.xlsx
+      Synverse jobs.
+      jobs.ods saved as jobs.xlsx
+covellite:~/git/private/gci/projects/syniverse/jobs$
+
+In this case I want to revert the last 8a5dd296 (only need 1sr 8 digits).
+
+2. Revert last 8a5dd296 commit:
+marcilr@covellite:~/git/private/gci/projects/syniverse/jobs$ \
+git revert 8a5dd296
+Hit ctrl-x at revert messge to save revert
+[master 2d2be2d] Revert "Updated with data that Whit Reeve \
+added in my absencee due to annual leave"
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rewrite jobs.ods (95%)
+ rewrite jobs.xlsx (90%)
+marcilr@covellite:~/git/private/gci/projects/syniverse/jobs$
+
+3. Git status
+covellite:~/git/private/gci/projects/syniverse/jobs$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        00ARCHIVES/
+
+nothing added to commit but untracked files present (use "git add" to track)
+covellite:~/git/private/gci/projects/syniverse/jobs$
+
+4. Git status
+covellite:~/git/private/gci/projects/syniverse/jobs$ git log jobs.xlsx
+commit 2d2be2de9f68808aa3d4d7a54169f20ebe8ba761
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Wed May 18 09:25:50 2016 -0800
+
+    Revert "Updated with data that Whit Reeve added in my absencee due to annual leave"
+    
+    This reverts commit 8a5dd296b2f0aeab91a379cb417b88581c6916c3.
+
+commit 8a5dd296b2f0aeab91a379cb417b88581c6916c3
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Fri May 13 10:36:16 2016 -0800
+
+    Updated with data that Whit Reeve added in my absencee due to annual leave
+    the last week of April and first week of may.
+
+commit a02bc11e0e83df89110891714a62a9f75e3603f2
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Mon Apr 4 08:48:10 2016 -0800
+
+    jobs.xlsx
+      Synverse jobs.
+      jobs.ods saved as jobs.xlsx
+covellite:~/git/private/gci/projects/syniverse/jobs$
+
+Looks like revert worked.
+
+4. Push changes back to master:
+covellite:~/git/private/gci/projects/syniverse/jobs$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 20.04 KiB | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To ssh://htpc/data/git/gci/projects/syniverse/jobs
+   e399715..2d2be2d  master -> master
+covellite:~/git/private/gci/projects/syniverse/jobs$
+
+
+Easy peasy.
+
+
+Links
+=====
+Revert Git repo to a previous commit
+Undo published commits with new commits
+# This will create three separate revert commits:
+git revert a867b4af 25eee4ca 0766c053
+http://stackoverflow.com/questions/4114095/revert-git-repo-to-a-previous-commit
