@@ -1,0 +1,138 @@
+rm.txt
+Created Fri Sep 25 08:50:44 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+git rm:
+
+
+git rm file1.txt
+git commit -m "remove file1.txt"
+
+
+How can I delete a file from git repo?
+
+
+git rm file.txt removes the file from the repo but also deletes it from the
+local file system.
+
+To remove the file from the repo and not delete it from the local file system
+use:
+  git rm --cached file.txt
+
+The below exact situation is where I use git to maintain version control for
+my business's website, but the "mickey" directory was a tmp folder to share
+private content with a CAD developer.  When he needed HUGE files, I made a
+private, unlinked directory and ftpd the files there for him to fetch via
+browser.  Forgetting I did this,  I later performed a git add -A from the
+website's base directory.  Subsequently, git status showed the new files
+needing committing.  Now I needed to delete them from git's tracking and
+version control...
+
+Sample output below is from what just happened to me, where I unintentionally
+deleted the .003 file.  Thankfully, I don't care what happened to the local
+copy to .003, but some of the other currently changed files were updates I
+just made to the website and would be epic to have been deleted on the local
+file system! "Local file system" = the live website (not a great practice, but
+is reality).
+
+[~/www]$ git rm shop/mickey/mtt_flange_SCN.7z.003
+error: 'shop/mickey/mtt_flange_SCN.7z.003' has local modifications
+(use --cached to keep the file, or -f to force removal)
+[~/www]$ git rm -f shop/mickey/mtt_flange_SCN.7z.003
+rm 'shop/mickey/mtt_flange_SCN.7z.003'
+[~/www]$ 
+[~/www]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   deleted:    shop/mickey/mtt_flange_SCN.7z.003
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#   modified:   shop/mickey/mtt_flange_SCN.7z.001
+#   modified:   shop/mickey/mtt_flange_SCN.7z.002
+[~/www]$ ls shop/mickey/mtt_flange_S*
+shop/mickey/mtt_flange_SCN.7z.001  shop/mickey/mtt_flange_SCN.7z.002
+[~/www]$ 
+[~/www]$ 
+[~/www]$ git rm --cached shop/mickey/mtt_flange_SCN.7z.002
+rm 'shop/mickey/mtt_flange_SCN.7z.002'
+[~/www]$ ls shop/mickey/mtt_flange_S*
+shop/mickey/mtt_flange_SCN.7z.001  shop/mickey/mtt_flange_SCN.7z.002
+[~/www]$ 
+[~/www]$ 
+[~/www]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   deleted:    shop/mickey/mtt_flange_SCN.7z.002
+#   deleted:    shop/mickey/mtt_flange_SCN.7z.003
+#
+# Changed but not updated:
+#   modified:   shop/mickey/mtt_flange_SCN.7z.001
+[~/www]$
+
+Update: This answer is getting some traffic, so I thought I'd mention my other
+Git answer[1] shares a couple of great resources: This page[2] has a graphic
+that help demystify Git for me.  The "Pro Git" book is online[3] and helps me
+a lot.
+
+shareimprove this answer
+edited Sep 12 '13 at 8:45
+
+answered May 25 '13 at 20:26
+Chris K
+
+stackoverflow.com/questions/2047465/
+
+
+Remotes
+=======
+Removing a remote
+
+
+To remote remote use:
+  $ git remote rm <shortname>
+
+
+Example
+-------
+git remote -v
+# View current remotes
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+git remote rm destination
+# Remove remote
+git remote -v
+# Verify it's gone
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+-- help.github.com/articles/removing-a-remote/
+
+
+
+Links
+=====
+[1] other Git answer
+http://stackoverflow.com/questions/9069061
+
+[2] This page
+http://nvie.com/posts/a-successful-git-branching-model/
+
+[3]  "Pro Git" book is online
+http://git-scm.com/book
+
+How can I delete a file from git repo?
+http://stackoverflow.com/questions/2047465/how-can-i-delete-a-file-from-git-repo
+
+Removing a remote
+https://help.github.com/articles/removing-a-remote/
