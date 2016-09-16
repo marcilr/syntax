@@ -70,7 +70,7 @@ remove.txt
   https://help.github.com/articles/removing-a-remote/
 
 rm.txt
-  Delete files or directories
+  Delete files or remotes
 
 revert.txt
   To revert commit(s) to a prior commit, using new commits, use 'revert'.
