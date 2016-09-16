@@ -82,6 +82,10 @@ revert.txt
   To revert commit(s) to a prior commit, using new commits, use 'revert'.
   $ git revert <commit> <commit> ...
 
+repo-config.txt
+  To alleviate the following error on server side in gti repo run:
+  $ git config receive.denyCurrentBranch ignore
+
 show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
