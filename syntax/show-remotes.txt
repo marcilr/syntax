@@ -1,0 +1,17 @@
+show-remotes.txt
+Created Wed Jan 27 14:01:00 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Show remotes
+
+
+Use 'git remote -v' to show URLS of repo's remotes.
+
+
+Example
+=======
+git$ git remote -v
+origin  git@github.com:marcilr/git.git (fetch)
+origin  git@github.com:marcilr/git.git (push)
+git$ 
