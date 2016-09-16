@@ -1,0 +1,65 @@
+commands.txt
+Created Thu Sep 24 08:22:55 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Commands for git
+
+
+Subversion       Git                               Description
+------------------------------------------------------------------------------
+                 git init                          Initialize repo
+svn co <repo>    git clone <repo>                  Checkout copy of repository
+svn add <file>   git add <file>                    Add file to repo
+svn commit       git commit -m "message text..."   Commit file to repo
+svn status       git status
+svn update       git pull                          Update to latest in repo
+                   or
+                 git fetch
+                 git merge
+???              git submodule add <repo>          Add existing repo as
+                                                   submodule of another.
+
+update           git clone --recursive <repo>      Checkout copy of repository
+                   or                              with submodules
+                 git clone <repo>                  
+                 git submodule init
+                 git submodule update
+
+For analysis:
+  $ git clone --bare . ~/subtut/public/super.git
+  $ git remote add origin ~/subtut/public/super.git
+  $ git config branch.master.remote origin
+  $ git config branch.master.merge refs/heads/master
+
+  git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+
+
+Examples
+========
+Clone home git repo:
+  git/gci$ git clone ssh://marcilr@htpc/data/git/gci/work-handoffs
+  Cloning into 'work-handoffs'...
+  warning: You appear to have cloned an empty repository.
+  Checking connectivity... done.
+  git/gci$
+
+Create htpc git repo:
+  $ git-repo-create ssh://marcilr@htpc/data/git/gci/work-handoffs
+
+Rsync git repo:
+  $ rsync -va --stats --progress <gitrepo> <target>
+  $ rsync -va --stats --progress jobs htpc:/data/git/jobs
+
+
+Links
+=====
+git-remote - Manage set of tracked repositories
+http://git-scm.com/docs/git-remote
+
+Git Submodule Tutorial
+https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+
+How can I delete a file from git repo?
+Great syntax here
+http://stackoverflow.com/questions/2047465/how-can-i-delete-a-file-from-git-repo
