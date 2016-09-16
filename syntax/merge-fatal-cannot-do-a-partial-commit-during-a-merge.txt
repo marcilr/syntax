@@ -1,0 +1,43 @@
+merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
+Created Mon Jun  6 20:33:12 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Git error on commit after merge - fatal: cannot do a partial commit during a merge
+
+
+I ran a git pull that ended in conflict.  I resolved the conflict files and everything is fine now
+(I use mergetool also).
+
+When I commit the resolved file with git commit file.php -m "message" I get the error:
+
+fatal: cannot do a partial commit during a merge.
+
+I had the same issue before and using -a in commit worked perfectly.  I think it's not the prefect
+way because I don't want to commit all changes.  I want to commit files separately with separate
+comments.  How can I do that?  Why git doesn't allow users to commit files separately after a
+merge? I could not find a satisfactory answer to this problem.
+
+asked Apr 29 '11 at 4:36
+pman
+http://stackoverflow.com/users/134143/pman
+
+
+Answer
+======
+I found that adding "-i" to the commit command fixes this problem for me.  The -i basically tells
+it to stage additional files before committing. That is:
+
+git commit -i myfile.php
+
+answered Nov 9 '11 at 9:39
+MikaelHalen
+http://stackoverflow.com/users/324106/mikaelhalen
+
+--http://stackoverflow.com/questions/5827944/
+
+
+Links
+=====
+Git error on commit after merge - fatal: cannot do a partial commit during a merge
+http://stackoverflow.com/questions/5827944/git-error-on-commit-after-merge-fatal-cannot-do-a-partial-commit-during-a-mer
