@@ -25,9 +25,6 @@ commands.txt
 config.txt
   The git config modifies the .git/config file.
 
-copy-repo-to-repo.txt
-  Copy file(s) repo to repo with history
-
 credentials.txt
   Credentials - caching and storing
 
