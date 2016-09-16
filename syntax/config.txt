@@ -1,0 +1,49 @@
+config.txt
+Created Thu Sep 24 13:21:02 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Synopsis
+========
+git config [<file-option>] [type] [-z|--null] name [value [value_regex]]
+git config [<file-option>] [type] --add name value
+git config [<file-option>] [type] --replace-all name value [value_regex]
+git config [<file-option>] [type] [-z|--null] --get name [value_regex]
+git config [<file-option>] [type] [-z|--null] --get-all name [value_regex]
+git config [<file-option>] [type] [-z|--null] --get-regexp name_regex [value_regex]
+git config [<file-option>] [type] [-z|--null] --get-urlmatch name URL
+git config [<file-option>] --unset name [value_regex]
+git config [<file-option>] --unset-all name [value_regex]
+git config [<file-option>] --rename-section old_name new_name
+git config [<file-option>] --remove-section name
+git config [<file-option>] [-z|--null] -l | --list
+git config [<file-option>] --get-color name [default]
+git config [<file-option>] --get-colorbool name [stdout-is-tty]
+git config [<file-option>] -e | --edit
+
+git-scm.com/docs/git-config
+
+The git config modifies the .git/config file.
+
+commands.txt:24
+  $ git config branch.master.remote origin
+  $ git config branch.master.merge refs/heads/master
+
+  git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+
+
+Links
+=====
+git-config - Get and set repository or global options
+http://git-scm.com/docs/git-config
+
+Git Submodule Tutorial
+https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+
+The Configuration File - 'Branch' Section
+GitGuys, git simplified?!
+Has sections:
+o git clone
+o git fetch
+o git merge
+http://www.gitguys.com/topics/the-configuration-file-branch-section/
