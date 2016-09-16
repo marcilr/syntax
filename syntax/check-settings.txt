@@ -1,0 +1,30 @@
+check-settings.txt
+Created Wed Sep 23 15:34:39 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Check settings
+
+covellite:~$ git config --list
+user.name=Raymond Marcil
+user.email=marcilr@gmail.com
+core.editor=nano
+push.default=simple
+covellite:~$
+
+git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+
+You can also check what Git thinks a specific key's
+value is by typing git config <key>:
+
+$ git config user.name
+John Doe
+
+git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+
+Links
+=====
+First Time Git Setup
+https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setu
