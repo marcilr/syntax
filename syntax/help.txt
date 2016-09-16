@@ -1,0 +1,22 @@
+help.txt
+Created Wed Sep 23 15:37:23 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Help
+If you ever need help while using Git, there are three ways to get the manual
+page (manpage) help for any of the Git commands:
+
+$ git help <verb>
+$ git <verb> --help
+$ man git-<verb>
+
+For example, you can get the manpage help for the config command by running
+
+$ git help config
+
+
+Links
+=====
+Getting Help
+https://git-scm.com/book/en/v2/Getting-Started-Getting-Help
