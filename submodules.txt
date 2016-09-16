@@ -1,0 +1,195 @@
+submodules.txt
+Created Thu Sep 24 08:37:18 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Submodules - Hierarchy of repositories
+
+Submodules allow you to keep a Git repository as a subdirectory of another Git
+repository. This lets you clone another repository into your project and keep
+your commits separate.
+
+git-scm.com/book/en/v2/Git-Tools-Submodules
+
+
+The concept of submodules is brilliant. It essentially allows you to attach an
+external repository inside another repository at a specific path.   There are
+four main functions you will need to understand in order to work with Git
+submodules.  In order, you will need to know how to add, make use of,
+remove, and update submodules. 
+
+chrisjean.com/
+
+
+
+Add repo as submodule of another
+================================
+To add a new submodule you use the git submodule add command with the absolute
+or relative URL of the project you would like to start tracking.  In this
+example, we'll add a library called "DbConnector".
+
+$ git submodule add https://github.com/chaconinc/DbConnector
+Cloning into 'DbConnector'...
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 11 (delta 0), reused 11 (delta 0)
+Unpacking objects: 100% (11/11), done.
+Checking connectivity... done.
+
+git-scm.com/book/en/v2/Git-Tools-Submodules
+
+
+Cloning a Project with Submodules
+=================================
+Here we'll clone a project with a submodule in it.  When you clone such a
+project, by default you get the directories that contain submodules, but none
+of the files within them yet:
+
+$ git clone https://github.com/chaconinc/MainProject
+Cloning into 'MainProject'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 14 (delta 1), reused 13 (delta 0)
+Unpacking objects: 100% (14/14), done.
+Checking connectivity... done.
+$ cd MainProject
+$ ls -la
+total 16
+drwxr-xr-x   9 schacon  staff  306 Sep 17 15:21 .
+drwxr-xr-x   7 schacon  staff  238 Sep 17 15:21 ..
+drwxr-xr-x  13 schacon  staff  442 Sep 17 15:21 .git
+-rw-r--r--   1 schacon  staff   92 Sep 17 15:21 .gitmodules
+drwxr-xr-x   2 schacon  staff   68 Sep 17 15:21 DbConnector
+-rw-r--r--   1 schacon  staff  756 Sep 17 15:21 Makefile
+drwxr-xr-x   3 schacon  staff  102 Sep 17 15:21 includes
+drwxr-xr-x   4 schacon  staff  136 Sep 17 15:21 scripts
+drwxr-xr-x   4 schacon  staff  136 Sep 17 15:21 src
+$ cd DbConnector/
+$ ls
+$
+
+The DbConnector directory is there, but empty.  You must run two commands:
+git submodule init to initialize your local configuration file, and
+git submodule update to fetch all the data from that project and check out the
+appropriate commit listed in your superproject:
+
+$ git submodule init
+Submodule 'DbConnector' (https://github.com/chaconinc/DbConnector) registered \
+for path 'DbConnector'
+$ git submodule update
+Cloning into 'DbConnector'...
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 11 (delta 0), reused 11 (delta 0)
+Unpacking objects: 100% (11/11), done.
+Checking connectivity... done.
+Submodule path 'DbConnector': checked out \
+'c3f01dc8862123d317dd46284b05b6892c7b29bc'
+
+Now your DbConnector subdirectory is at the exact state it was in when you
+committed earlier.
+
+There is another way to do this which is a little simpler, however.  If you
+pass --recursive to the git clone command, it will automatically initialize
+and update each submodule in the repository.
+
+$ git clone --recursive https://github.com/chaconinc/MainProject
+Cloning into 'MainProject'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 14 (delta 1), reused 13 (delta 0)
+Unpacking objects: 100% (14/14), done.
+Checking connectivity... done.
+Submodule 'DbConnector' (https://github.com/chaconinc/DbConnector) \
+registered for path 'DbConnector'
+Cloning into 'DbConnector'...
+remote: Counting objects: 11, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 11 (delta 0), reused 11 (delta 0)
+Unpacking objects: 100% (11/11), done.
+Checking connectivity... done.
+Submodule path 'DbConnector': checked out \
+'c3f01dc8862123d317dd46284b05b6892c7b29bc'
+
+git-scm.com/book/en/v2/Git-Tools-Submodules
+
+
+Arrange Repositories in Folders on Github
+=========================================
+...
+How can I group related github repositories in a folder structure?  Is there a
+feature providing any ability to order and structure or even tag repositories
+on github?
+
+asked Aug 7 '12 at 19:46
+danijar
+
+
+The goal is to have hierarchical repositories.  Such that a checkout of one
+repository will pull done all subrepositories.
+
+On GitHub itself, you cannot group your repos by "folder", unless you create
+organizations.  See SublimeText, for instance, as a group of all sublimeText
+packages repos.
+
+But that won't support a nested folder organization.
+
+Another solution is for you to define repositories which reference other repos,
+declared as submodules.
+
+That way, when you are cloning one of the repos (which references other repos),
+called "parent repos", they will be cloned in their own directory, with a
+sub-directory per submodules.
+
+It won't be visually apparent on your GitHub account itself (as it will still
+contains a large list of repos, even larger with the parent repos), but by
+cloning one parent repo, you will get back all its associated submodules in it.
+
+answered Aug 8 '12 at 6:44
+VonC
+
+stackoverflow.com/questions/11852982/
+
+
+Remove submodule
+================
+To remove all submodules, you can run:
+  git config --remove-section submodule."Complete submodule name"
+
+I also had to remove .git/modules/<submodule name> directory in order to be
+completely rid of the submodule.  Otherwise I kept on getting the error A git
+directory for '<submodule name>' is found locally with remote(s) when trying
+to re-add the submodule with same name but from different forked repository.
+
+gist.github.com/kyleturner/1563153
+
+
+Links
+=====
+Arrange Repositories in Folders on Github
+http://stackoverflow.com/questions/11852982/arrange-repositories-in-folders-on-github
+
+Git Submodules: Adding, Using, Removing, Updating
+Chris Jean, WordPress developer for iThemes, Linux fan, all-around nerd
+Solid method here.
+https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
+
+Git Submodule Tutorial
+Submodule support has been available in Git since version 1.5.3.  This
+tutorial explains how to create and publish a repository with four submodules
+using the git-submodule(1) command.
+Some verty good syntax here.
+https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial
+
+kyleturner/Remove Submodule
+Created 4 years ago
+https://gist.github.com/kyleturner/1563153
+
+Nested GIT repo gotchas!
+Posted on April 26, 2011 by Siddique
+http://boxysystems.com/index.php/nested-git-repo-gotchas/
+
+Submodules
+Best details on working with submodules here.
+FIXME: Need to pull some more data from here.
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
