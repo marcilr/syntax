@@ -1,0 +1,74 @@
+links.txt
+Created Wed Sep 23 15:33:46 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Syntax related links
+
+
+Links
+=====
+cannot push into git repository
+http://stackoverflow.com/questions/3221859/cannot-push-into-git-repository
+
+Duplicate submodules with Git
+http://stackoverflow.com/questions/4115817/duplicate-submodules-with-git
+
+First Time Git Setup
+https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+Getting a Git Repository
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+Git Tools - Stashing and Cleaning
+https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
+
+Merging vs. Rebasing
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+
+Splitting a subfolder out into a new repository
+You can turn a folder within a Git repository into a brand new repository.
+https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/
+
+SVN Crash Course
+http://git.or.cz/course/svn.html
+
+Pro Git book
+http://git-scm.com/book
+
+Plumbing and Porcelain
+.git directory:
+$ ls -F1
+HEAD
+config*
+description
+hooks/
+info/
+objects/
+refs/
+https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
+
+Removing a remote
+Use the git remote rm command to remove a remote URL from your repository.
+The git remote rm command takes one argument:
+> A remote name, for example, destination
+https://help.github.com/articles/removing-a-remote/
+
+Start a new git repository
+http://kbroman.org/github_tutorial/pages/init.html
+
+The protocols
+https and ssh
+https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+
+Think Like (a) Git
+A Guide for the Perplexed
+http://think-like-a-git.net/   <===
+
+What is the difference between `git merge` and `git merge --no-ff`?
+http://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
+
+Working with Remotes
+Pro Git book
+http://git-scm.com/book/en/Git-Basics-Working-with-Remotes
+
