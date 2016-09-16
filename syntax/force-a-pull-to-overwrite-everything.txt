@@ -1,0 +1,36 @@
+force-a-pull-to-overwrite-everything.txt
+Created Thu Mar 17 09:00:18 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Git - force a pull to overwrite everything, on every pull
+
+Really the ideal way to do this is to not use pull at all, but instead fetch
+and reset:
+
+  git fetch origin master
+  git reset --hard FETCH_HEAD
+  git clean -df
+
+(Altering master to whatever branch you want to be following.)
+
+pull is designed around merging changes together in some way, whereas reset is
+designed around simply making your local copy match a specific commit.
+
+You may want to consider slightly different options to clean depending on your
+system's needs.
+
+edited Mar 7 '12 at 19:40
+Novelocrat
+
+answered Mar 6 '12 at 18:45
+Amber
+
+
+Links
+=====
+Git - force a pull to overwrite everything, on every pull
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
+http://stackoverflow.com/questions/9589814/git-force-a-pull-to-overwrite-everything-on-every-pull
