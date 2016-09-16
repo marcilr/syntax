@@ -1,0 +1,72 @@
+git.txt
+Created Wed Sep 23 10:26:06 AKDT 2015
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+git - fast, scalable, distributed revision control system
+  -- distributed-is-the-new-centralized
+
+Git is a free and open source distributed version control system designed to
+handle everything from small to very large projects with speed and efficiency.
+
+Git is easy to learn and has a tiny footprint with lightning fast performance.
+It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with
+features like cheap local branching, convenient staging areas, and multiple
+workflows.
+
+git-scm.com/
+
+
+Thu Jun  9 09:29:39 AKDT 2016
+=============================
+I migrated the root git repository from public GitHub to private htpc.
+The public root repo would have the private repository paths exposed to
+the public.  Thought it best to keep this data private.  Especially since
+it exposes financial or work data.
+
+
+Clone github repo
+=================
+git$ git clone https://github.com/marcilr/git-github.git github
+Cloning into 'github'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 15 (delta 4), reused 12 (delta 4), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+Checking connectivity... done.
+git$ 
+
+
+Push github repo
+================
+git$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.01 KiB | 0 bytes/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+To git@github.com:marcilr/git.git
+   487ecb7..46c748a  master -> master
+git$ 
+
+
+Warning: Never git add, commit, or push sensitive information to a remote
+repository.  Sensitive information can include, but is not limited to:
+
+> Passwords
+> SSH keys
+> AWS access keys
+> API keys
+> Credit card numbers
+> PIN numbers
+
+-- help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+
+Links
+=====
+Adding an existing project to GitHub using the command line
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+git - fast, scalable, distributed revision control system
+https://git-scm.com/
