@@ -67,6 +67,9 @@ merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
 normal-vs-bare.txt
   Normal vs. bare repositories
 
+push.txt
+  Update remote refs along with associated objects
+
 remove.txt
   Remove a remote:
     $ git remote rm <shortname>
