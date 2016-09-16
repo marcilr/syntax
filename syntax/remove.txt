@@ -1,0 +1,40 @@
+remove.txt
+Created Wed Feb  3 08:28:02 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Remove remote
+
+$ git remote rm <remote>
+
+Use the git remote rm command to remove a remote URL from your repository.
+
+The git remote rm command takes one argument:
+> A remote name, for example, destination
+
+--help.github.com/articles/removing-a-remote/
+
+
+Examples
+========
+$ git remote -v
+# View current remotes
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+$ git remote rm destination
+# Remove remote
+git remote -v
+# Verify it's gone
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+--help.github.com/articles/removing-a-remote/
+
+
+Links
+=====
+Removing a remote
+https://help.github.com/articles/removing-a-remote/
