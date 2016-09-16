@@ -1,0 +1,150 @@
+clone.txt
+Created Wed Sep 23 13:58:14 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Clone repo
+
+
+Options
+=======
+--bare     Treat the repository as a bare repository. If GIT_DIR environment
+           is not set, it is set to the current working directory.
+           Best I can tell eliminates the .git/ subdirectory and moves the
+           files up to one directory to the root.
+
+This properly clones the hellow-world/ repo with the .git subdirectory:
+
+    $ git clone https://github.com/marcilr/hello-world.git
+    $ git clone git@github.com:marcilr/hello-world.git
+    $ git clone git@github.com:marcilr/git.git
+
+
+Looks very straight forward:
+
+A common transport protocol for Git when self-hosting is over SSH.  This is
+because SSH access to servers is already set up in most places - and if it
+isn't, it's easy to do.  SSH is also an authenticated network protocol; and
+because it's ubiquitous, it's generally easy to set up and use.
+
+To clone a Git repository over SSH, you can specify ssh:// URL like this:
+  $ git clone ssh://user@server/project.git
+
+Or you can use the shorter scp-like syntax for the SSH protocol:
+  $ git clone user@server:project.git
+
+git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+
+
+This creates a full copy of the data, but without a working directory for
+editing files, and ensures a clean, fresh export of all the old data.
+
+$ git clone --bare https://githost.org/extuser/repo.git
+# Makes a bare clone of the external repository in a local directory
+
+Clone without checking ssl certificate:
+covellite:~$ export GIT_SSL_NO_VERIFY=1
+
+Clone git repo from github:
+covellite:~$ git clone --bare https://github.com/marcilr/git.git
+Cloning into bare repository 'git.git'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+covellite:~$ 
+
+
+
+Wed Sep 23 14:30:37 AKDT 2015
+=============================
+Added github.com certificate authority to ca-certificates.crt to alleviate
+github clone repo error:
+  covellite:~$ git clone --bare https://githost.org/git.git
+  Cloning into bare repository 'git.git'...
+  fatal: unable to access 'https://githost.org/git.git/': \
+    server certificate verification failed. CAfile: \
+    /etc/ssl/certs/ca-certificates.crt CRLfile: none
+  covellite:~$
+
+1. Create /usr/share/ca-certificates/mozilla/github.crt file
+with github certificate authority cert:
+
+covellite:~$ echo -n | openssl s_client -showcerts \
+-connect github.com:443 2>/dev/null | \
+sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' \
+> /usr/share/ca-certificates/mozilla/GitHub.crt 
+
+2. Update the /etc/ca-certificates.conf certificate authority
+mapping with github certificate authority cert:
+
+covellite:~# cp /etc/ca-certificates.conf \
+/etc/ca-certificates.conf-ORIG
+
+covellite:~# nano /etc/ca-certificates.conf 
+...
+mozilla/GeoTrust_Universal_CA.crt
+mozilla/GitHub.crt
+mozilla/Global_Chambersign_Root_-_2008.crt
+...
+
+3. Run update-ca-certificates that updates the
+/etc/ssl/certs/ca-certificates.crt file with all the certs
+lists in /etc/ca-certificates.conf:
+
+covellite:~# update-ca-certificates 
+Updating certificates in /etc/ssl/certs... 1 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d....
+Adding debian:GitHub.pem
+done.
+done.
+covellite:~#
+
+4. Test with github git repo checkout:
+covellite:~$ git clone --bare https://githost.org/git.git
+
+covellite:~$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /home/marcilr/.ssh/id_rsa: 
+Identity added: /home/marcilr/.ssh/id_rsa (/home/marcilr/.ssh/id_rsa)
+covellite:~$
+
+covellite:~$ git clone --bare https://github.com/marcilr/git.git git
+Cloning into bare repository 'git'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+covellite:~$
+
+  or
+
+covellite:~$ git clone --bare git@github.com:marcilr/git.git git
+Cloning into bare repository 'git'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+covellite:~$
+
+Like the latter as I think ssh is better than https.
+
+Yeh hah, github clone filenally worked!
+
+NOTE: Had to specify 'git' target to not get the default 'git.git'
+      target.
+
+
+
+Links
+=====
+[1] "SSL works with browser, wget, and curl, but fails with git"
+http://stackoverflow.com/q/7814423/6309
+
+[2] block post
+http://blog.venthur.de/index.php/2012/08/usability-of-git-http-backend-with-self-signed-ssl-certificates/
+
+[3] issue 4272
+https://github.com/gitlabhq/gitlabhq/issues/4272
+
+Git on the Server - The Protocols
+https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+
+git-clone(1) Manual Page
+https://www.kernel.org/pub/software/scm/git/docs/git-clone.html
+
+server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+http://stackoverflow.com/questions/21181231/server-certificate-verification-failed-cafile-etc-ssl-certs-ca-certificates-c
