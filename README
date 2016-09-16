@@ -1,0 +1,19 @@
+README
+Created Fri Sep 16 11:43:09 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+branching.txt
+
+git.txt
+  git - fast, scalable, distributed revision control system
+  -- distributed-is-the-new-centralized
+  https://git-scm.com/
+
+links.txt
+remotes.txt
+submodules.txt
+syntax
+syntax-remotes-syntax
