@@ -1,0 +1,90 @@
+README
+Created Wed Sep 23 10:17:04 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+add.txt
+  Add remote repository
+
+change-history.txt
+  View the change history of a file using Git versioning
+  http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
+
+check-settings.txt
+  Check settings
+  $ git config --list
+
+clone.txt
+  Clone repo
+
+commands.txt
+  Commands for git
+
+config.txt
+  The git config modifies the .git/config file.
+
+copy-repo-to-repo.txt
+  Copy file(s) repo to repo with history
+
+credentials.txt
+  Credentials - caching and storing
+
+force-a-pull-to-overwrite-everything.txt
+  Git - force a pull to overwrite everything, on every pull
+  git fetch origin master
+  git reset --hard FETCH_HEAD
+  git clean -df
+  http://stackoverflow.com/questions/9589814/git-force-a-pull-to-overwrite-everything-on-every-pull
+
+help.txt
+  Help
+  If you ever need help while using Git, there are three ways to get the manual
+  page (manpage) help for any of the Git commands:
+
+  $ git help <verb>
+  $ git <verb> --help
+  $ man git-<verb>
+
+  For example, you can get the manpage help for the config command by running
+
+  $ git help config
+
+init.txt
+  init
+  If you're starting to track an existing project in Git, you need to go to
+  the project's directory and type:
+  $ git init
+  https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+links.txt
+  Syntax related links
+
+merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
+  Git error on commit after merge - fatal: cannot do a partial commit during a merge
+  Solution:
+    git commit -i myfile.php
+  http://stackoverflow.com/questions/5827944/git-error-on-commit-after-merge-fatal-cannot-do-a-partial-commit-during-a-mer
+
+remove.txt
+  Remove a remote:
+    $ git remote rm <shortname>
+  https://help.github.com/articles/removing-a-remote/
+
+rm.txt
+  Delete files or directories
+
+revert.txt
+  To revert commit(s) to a prior commit, using new commits, use 'revert'.
+  $ git revert <commit> <commit> ...
+
+show-remotes.txt
+  Show remotes
+  Use 'git remote -v' to show URLS of repo's remotes.
+
+submodules/
+  Submodules
+
+syntax.txt
+  Syntax
