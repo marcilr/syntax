@@ -1,0 +1,75 @@
+add.txt
+Created Wed Jan 27 14:07:54 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+
+Adding a remote
+===============
+To add a new remote, use the git remote add command on the terminal,
+in the directory your repository is stored at.
+
+The git remote add command takes two arguments:
+
+o A remote name, for example, origin
+o A remote URL, for example, https://github.com/user/repo.git
+
+-- help.github.com/articles/adding-a-remote/
+
+
+To add a remote repository and shortname:
+  $ git remote add <shortname> <url>         <===
+
+-- git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
+
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+-- bad 'git remote add' command:
+   bornite:~/svn/software/my_project$ git remote add \
+   https://github.com/marcilr/git-software
+
+
+Examples
+========
+bornite:~/svn/software/my_project$ git remote add \
+origin https://github.com/marcilr/git-software
+
+bornite:~/svn/software/my_project$ git remote -v
+origin  https://github.com/marcilr/git-software (fetch)
+origin  https://github.com/marcilr/git-software (push)
+marcilr@bornite:~/svn/software/my_project$
+
+Now push to github repo:
+bornite:~/svn/software/my_project$ git push origin master
+Username for 'https://github.com': marcilr
+Password for 'https://marcilr@github.com': 
+Counting objects: 27, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (27/27), 15.26 KiB | 0 bytes/s, done.
+Total 27 (delta 12), reused 0 (delta 0)
+To https://github.com/marcilr/git-software
+ * [new branch]      master -> master
+bornite:~/svn/software/my_project$
+
+Worked good.
+
+
+Links
+=====
+Adding a remote
+https://help.github.com/articles/adding-a-remote/
+
+Git Basics - Working with Remotes
+Git Pro, 2nd Edition, 2014
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
