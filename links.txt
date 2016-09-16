@@ -1,0 +1,14 @@
+links.txt
+Created Wed Jan 27 13:52:28 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Git related links
+
+
+Links
+=====
+Git Basics - Working with Remotes
+Git Pro book, 2nd Edition, 2014
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
