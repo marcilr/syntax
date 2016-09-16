@@ -1,0 +1,38 @@
+repo-config.txt
+Created Mon Feb  8 09:10:46 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+To alleviate the following error on server side in gti repo run:
+  $ git config receive.denyCurrentBranch ignore
+
+Example:
+  htpc:/data/git/proj/kindle-organizer$ \
+  git config receive.denyCurrentBranch ignore
+
+
+covellite:~/git/proj/kindle-organizer$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 946 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: error: refusing to update checked out branch: refs/heads/master
+remote: error: By default, updating the current branch in a non-bare repository
+remote: error: is denied, because it will make the index and work tree inconsistent
+remote: error: with what you pushed, and will require 'git reset --hard' to match
+remote: error: the work tree to HEAD.
+remote: error: 
+remote: error: You can set 'receive.denyCurrentBranch' configuration variable to
+remote: error: 'ignore' or 'warn' in the remote repository to allow pushing into
+remote: error: its current branch; however, this is not recommended unless you
+remote: error: arranged to update its work tree to match what you pushed in some
+remote: error: other way.
+remote: error: 
+remote: error: 
+remote: error: To squelch this message and still keep the default behaviour, set
+remote: error: 'receive.denyCurrentBranch' configuration variable to 'refuse'.
+To ssh://htpc/data/git/proj/kindle-organizer
+ ! [remote rejected] master -> master (branch is currently checked out)
+error: failed to push some refs to 'ssh://htpc/data/git/proj/kindle-organizer'
+covellite:~/git/proj/kindle-organizer$
