@@ -1,0 +1,56 @@
+change-history.txt
+Created Wed Sep 23 10:17:18 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+View the change history of a file using Git versioning
+
+
+How can I view the change history of an individual file in Git, complete with
+what has changed?
+
+I have got as far as:
+
+  git log -- [filename]
+
+which shows me the commit history of the file, but how do I get at the content
+of each of the changes?
+
+I'm trying to make the transition from MS SourceSafe and that used to be a
+simple right-click -> show history.
+
+asked Nov 10 '08 at 15:42
+Richard
+
+
+You can use
+
+git log -p filename
+to let git generate the patches for each log entry.
+
+See
+
+git help log
+for more options - it can actually do a lot of nice things :) To get just the
+diff for a specific commit you can
+
+git show HEAD 
+or any other revision by identifier. Or use
+
+gitk
+to browse the changes visually.
+
+answered Nov 10 '08 at 15:56
+VolkA
+
+stackoverflow.com/questions/278192/
+
+
+gitk - fast, scalable, distributed revision control system
+  (revision tree visualizer)
+
+
+Links
+=====
+View the change history of a file using Git versioning
+http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
