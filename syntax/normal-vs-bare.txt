@@ -1,0 +1,110 @@
+normal-vs-bare.txt
+Created Wed Feb  3 13:10:57 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Normal vs Bare git repositories
+
+
+Main difference
+===============
+The main difference seems to be:
+
+o in the normal git repository you have a .git folder inside the repository
+  containing all relevant data and all other files build your working copy
+
+o in a bare Git repository, there is no working copy and the folder (let's
+  call it repo.git) contains the actual repository data
+
+--stackoverflow.com/questions/2199897/how-to-convert-a-normal-git-repository-to-a-bare-one/2199939#2199939
+
+
+Push to non-bare repositories
+=============================
+One solution is to run the following command:
+  git config receive.denyCurrentBranch ignore
+
+After this it works, but I would like to know why I need to use this option.
+Is this the only option? What are the consequences of doing this?
+
+This worked for the /data/git/gci/* repos on htpc.
+i.e. After doing this, for each repo, could gti push to them from
+GCI Network Services, OSS covellite Debian jessie 8.3 amd64 workstation.
+
+--stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git
+
+
+You should really just push to bare Git repositories
+====================================================
+As pointed out in some[1] of the other answers[1], you shouldn't really be pushing
+to a non-bare repository, for the reasons I pointed out above, and which Git
+itself is telling you.
+--stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git
+
+
+In short: replace the contents of repo with the contents of repo/.git, then
+tell the repository that it is now a bare repository.
+
+To do this, execute the following commands:
+
+cd repo
+mv .git .. && rm -fr *
+mv ../.git .
+mv .git/* .
+rmdir .git
+
+git config --bool core.bare true
+cd ..; mv repo repo.git # renaming just for clarity
+
+	
+In short: replace the contents of repo with the contents of repo/.git,
+then tell the repository that it is now a bare repository.
+
+To do this, execute the following commands:
+
+cd repo
+mv .git .. && rm -fr *
+mv ../.git .
+mv .git/* .
+rmdir .git
+
+git config --bool core.bare true
+cd ..; mv repo repo.git # renaming just for clarity
+
+Note that this is different from doing a git clone --bare to a new location
+(see below).
+
+That rm command may need * \.[!.]* rather than * in order to remove dot-files
+and dot-directories. - minopret Aug 27 '12 at 18:25
+
+
+git clone --bare
+================
+$ git clone --bare my_project my_project.git
+Cloning into bare repository 'my_project.git'...
+done.
+
+Wrong, this method is not the equivalent.  Doing a clone doesn't preserve
+config options, which can be critical to proper operation such as if you
+use git-p4.  Additionally, a clone destroys remotes, again with something
+like git-p4 you lose the p4/master branch when you clone, so the above
+approach is preferable. - nosatalian Apr 21 '10 at 2:00
+
+--stackoverflow.com/questions/2199897/how-to-convert-a-normal-git-repository-to-a-bare-one/2199939#2199939
+
+
+Links
+=====
+[1] some
+What are the consequences of using receive.denyCurrentBranch in Git?
+http://stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git/12266187#12266187
+
+[2] other answers
+What are the consequences of using receive.denyCurrentBranch in Git?
+http://stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git/12266232#12266232
+
+How to convert a normal Git repository to a bare one?
+http://stackoverflow.com/questions/2199897/how-to-convert-a-normal-git-repository-to-a-bare-one/2199939#2199939
+
+Why Git won't let you push to non-bare repositories
+http://stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git
