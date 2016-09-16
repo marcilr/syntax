@@ -1,0 +1,25 @@
+init.txt
+Created Wed Feb  3 09:00:35 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+init
+
+
+If you're starting to track an existing project in Git, you need to go to the
+project's directory and type:
+
+  $ git init
+
+This creates a new subdirectory named .git that contains all of your necessary
+repository files - a Git repository skeleton.  At this point, nothing in your
+project is tracked yet.  (See Git Internals for more information about exactly
+what files are contained in the .git directory you just created.)
+--git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+
+
+Links
+=====
+Git Basics - Getting a Git Repository
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
