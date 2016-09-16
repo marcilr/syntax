@@ -6,14 +6,34 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 Filelist
 ========
 branching.txt
+  Branching
 
 git.txt
   git - fast, scalable, distributed revision control system
   -- distributed-is-the-new-centralized
   https://git-scm.com/
 
+
 links.txt
+  Git related links
+
 remotes.txt
+  Remotes
+  To be able to collaborate on any Git project, you need to know how
+  to manage your remote repositories.  Remote repositories are versions
+  of your project that are hosted on the Internet or network somewhere.
+  You can have several of them, each of which generally is either
+  read-only or read/write for you.  Collaborating with others involves
+  managing these remote repositories and pushing and pulling data to
+  and from them when you need to share work.  Managing remote
+  repositories includes knowing how to add remote repositories,
+  remove remotes that are no longer valid, manage various remote
+  branches and define them as being tracked or not, and more.  In
+  this section, we'll cover some of these remote-management skills.
+  http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
 submodules.txt
-syntax
-syntax-remotes-syntax
+  Submodules
+
+syntax/
+  Synta
