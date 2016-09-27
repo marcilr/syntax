@@ -35,6 +35,10 @@ force-a-pull-to-overwrite-everything.txt
   git clean -df
   http://stackoverflow.com/questions/9589814/git-force-a-pull-to-overwrite-everything-on-every-pull
 
+force-git-push-to-overwrite-remote-files.txt
+  Force "git push" to overwrite remote files
+  http://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files
+
 help.txt
   Help
   If you ever need help while using Git, there are three ways to get the manual
