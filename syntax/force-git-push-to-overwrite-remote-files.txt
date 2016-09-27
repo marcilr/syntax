@@ -1,0 +1,108 @@
+force-git-push-to-overwrite-remote-files.txt
+Created Tue Sep 27 14:22:34 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Force "git push" to overwrite remote files
+
+
+You should be able to force your local revision to the remote repo by using
+  git push -f <remote> <branch>
+
+(e.g. git push -f origin master).  Leaving off <remote> and <branch> will
+force push all local branches that have set --set-upstream.
+
+Just be warned, if other people are sharing this repository their revision
+history will conflict with the new one.  And if they have any local commits
+after the point of change they will become invalid.
+
+Update: Thought I would add a side-note.  If you are creating changes that
+others will review, then it's not uncommon to create a branch with those
+changes and rebase periodically to keep them up-to-date with the main
+development branch.  Just let other developers know this will happen
+periodically so they'll know what to expect.
+
+Update 2: Because of the increasing number of viewers I'd like to add some
+additional information on what to do when your upstream does experience a
+force push.
+
+Say I've cloned your repo and have added a few commits like so:
+
+            D----E  topic
+           /
+A----B----C         development
+
+But later the development branch is hit with a rebase, which will cause me to
+receive an error like so when I run git pull:
+
+Unpacking objects: 100% (3/3), done.
+From <repo-location>
+ * branch            development     -> FETCH_HEAD
+Auto-merging <files>
+CONFLICT (content): Merge conflict in <locations>
+Automatic merge failed; fix conflicts and then commit the result.
+
+Here I could fix the conflicts and commit, but that would leave me with a
+really ugly commit history:
+
+       C----D----E----F    topic
+      /              /
+A----B--------------C'  development
+
+It might look enticing to use git pull --force but be careful because that'll
+leave you with stranded commits:
+
+            D----E   topic
+
+A----B----C'         development
+
+So probably the best option is to do a git pull --rebase.  This will require
+me to resolve any conflicts like before, but for each step instead of
+committing I'll use git rebase --continue.  In the end the commit history will
+look much better:
+
+            D'---E'  topic
+           /
+A----B----C'         development
+
+Update 3: You can also use the --force-with-lease option as a "safer" force
+push, as mentioned by Cupcake in his answer:[1]
+
+Force pushing with a "lease" allows the force push to fail if there are new
+commits on the remote that you didn't expect (technically, if you haven't
+fetched them into your remote-tracking branch yet), which is useful if you
+don't want to accidentally overwrite someone else's commits that you didn't
+even know about yet, and you just want to overwrite your own:
+  git push <remote> <branch> --force-with-lease
+
+You can learn more details about how to use --force-with-lease by reading any
+of the following:
+
+o git push documentation[2]
+
+o Git: How to ignore fast forward and revert origin [branch] to earlier
+  commit?[3]
+
+edited Aug 22 '15 at 4:43
+user456814
+
+answered May 9 '12 at 5:48
+Trevor Norris - http://stackoverflow.com/users/591166/trevor-norris
+
+--stackoverflow.com/questions/10510462/
+
+
+Links
+=====
+[1] as mentioned by Cupcake in his answer:
+http://stackoverflow.com/a/24768381/456814
+
+[2] git push documentation
+http://jk.gs/git-push.html
+
+[3] Git: How to ignore fast forward and revert origin [branch] to earlier
+commit?
+http://stackoverflow.com/questions/3166713/git-how-to-ignore-fast-forward-and-revert-origin-branch-to-earlier-commit/18505634#18505634
+
+Force "git push" to overwrite remote files
+http://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files
