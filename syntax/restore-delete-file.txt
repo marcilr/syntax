@@ -1,0 +1,10 @@
+restore-delete-file.txt
+Created Fri Sep 30 11:15:54 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Restore deleted file in git
+
+
+To restore a deleted file in git:
+$ git restore <deletedFile>
