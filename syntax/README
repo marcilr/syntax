@@ -39,6 +39,10 @@ force-git-push-to-overwrite-remote-files.txt
   Force "git push" to overwrite remote files
   http://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files
 
+go-to-particular-revison.txt
+  Use git checkout <sha1> to check out a particular commit.
+  http://stackoverflow.com/questions/7539130/git-go-to-particular-revision
+
 help.txt
   Help
   If you ever need help while using Git, there are three ways to get the manual
