@@ -1,0 +1,14 @@
+go-to-particular-revison.txt
+Created Mon Oct  3 13:40:24 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Use git checkout <sha1> to check out a particular commit.
+--stackoverflow.com/questions/7539130/
+
+
+Links
+=====
+Git - go to particular revision
+http://stackoverflow.com/questions/7539130/git-go-to-particular-revision
+
