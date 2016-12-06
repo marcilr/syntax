@@ -109,3 +109,10 @@ submodules/
 
 syntax.txt
   Syntax
+
+undelete.txt
+  I successfully used this simple syntax to undelete a git file
+  immediately after deletion.
+  -- Find and restore a deleted file in a Git repository
+     http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
+
