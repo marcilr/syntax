@@ -1,0 +1,77 @@
+undelete.txt
+Created Mon Dec  5 15:05:16 AKST 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+I successfully used this simple syntax to undelete a git file
+immediately after deletion.
+
+
+Answers
+-------
+Find the last commit that affected the given path.  As the file isn't in the
+HEAD commit, this commit must have deleted it.
+
+git rev-list -n 1 HEAD -- <file_path>
+Then checkout the version at the commit before, using the caret (^) symbol:
+
+git checkout <deleting_commit>^ -- <file_path>
+Or in one command, if $file is the file in question.
+
+git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
+
+edited Jun 15 '15 at 4:20
+Dave Jarvis
+
+answered Jul 11 '09 at 7:12
+Charles Bailey
+
+	
+63   The tricky bit is to checkout the commit BEFORE, using the ^ suffix.
+     Thanks. – Christian Oudard Apr 26 '10 at 14:40
+20   What is the ^ at the end for? – ranman Apr 22 '11 at 19:32
+12   @Ranman: It means "first parent of". – Charles Bailey Apr 22 '11 at 19:38
+
+--http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
+
+Wow, there is some tricky syntax above.
+
+
+Example
+=======
+Mistakenly deleted git/src/daemons/tftpd.txt:
+
+covellite:~/git/src/daemons$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    tftpd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+covellite:~/git/src/daemons$
+
+
+To restore tftpd.txt:
+
+1. Get the version of the prior commit that in this case was the
+   delete.
+   
+   covellite:~/git/src/daemons$ git rev-list -n 1 HEAD -- .
+   3a3c970faf5c9e3ac436238498a14b278cef7624
+   covellite:~/git/src/daemons$
+
+2. Run command to undelete file:
+covellite:~/git/src/daemons$ git checkout \
+3a3c970faf5c9e3ac436238498a14b278cef7624^ -- .
+covellite:~/git/src/daemons$ 
+
+This worked without a hitch.
+
+
+Links
+=====
+Find and restore a deleted file in a Git repository
+http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
