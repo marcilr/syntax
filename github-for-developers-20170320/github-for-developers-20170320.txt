@@ -1,0 +1,62 @@
+github-for-developers-20170320.txt
+Created Mon Mar 20 08:30:21 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+GoToWebinar - GitHub for Developers
+
+Organizer: training@github.com
+Subject:   GoToWebinar - GitHub for Developers
+Location:  GoToWebinar - See conference call information below
+
+Start time: Mon 3/20/2017   8:00AM
+End time:   Mon 3/20/2017  11:00AM
+
+1. Click and join at the specified time and date:
+https://global.gotowebinar.com/join/8811108333102195202/752596856
+
+2. Note: This link should not be shared with others; it is unique to you.
+
+2. Choose one of the following audio options:
+
+TO USE YOUR COMPUTER'S AUDIO:
+When the Webinar begins, you will be connected to audio using your computer's microphone and speakers (VoIP). A headset is recommended.
+
+-- OR --
+
+TO USE YOUR TELEPHONE:
+If you prefer to use your phone, you must select "Use Telephone" after joining
+the webinar and call in using the numbers below.
+
+United States: +1 (562) 247-8321
+    Access Code: 885-280-105
+    Audio PIN: Shown after joining the webinar
+
+
+Please make sure to review and complete our class prerequisites at
+https://services.github.com/checklists/#developers.  This leads to deeper
+in-class engagement with the technology and platform.  For class objectives
+please visit https://services.github.com/training/#developers.  Arrive a
+Few Minutes Early: On class day, please sign in 15 minutes before the
+scheduled class start time.  We can test audio and make sure everything's
+perfect for the session to start on time. If you're experiencing any issues
+with GoToWebinar, please contact their customer support team:
+http://help.citrix.com/webinar. My training team colleagues and I are happy
+to field logistics questions prior to class. Just drop us a line at
+services@github.com.
+
+
+Can open:
+github.com/githubteacher/march-developers/issues
+
+Argh... Missed 1st 1/2 half of class a bit lost...
+
+
+Command line section
+====================
+$ git --version
+git version 2.1.4
+
+Config:
+--system
+--global
+--local
