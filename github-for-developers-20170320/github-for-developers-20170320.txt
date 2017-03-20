@@ -57,6 +57,6 @@ $ git --version
 git version 2.1.4
 
 Config:
---system
---global
---local
+--system - Specific to system
+--global - Specific you your user account
+--local  - Specific to repository
