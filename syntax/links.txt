@@ -23,6 +23,10 @@ https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 Git Tools - Stashing and Cleaning
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
 
+GitHub for Developers: Training Manual
+From gti webinar on Mon Mar 20 08:10:58 AKDT 2017
+https://github.github.io/training-manual/#_using_branches
+
 Merging vs. Rebasing
 https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 
