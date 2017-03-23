@@ -1,0 +1,12 @@
+links.txt
+Created Thu Mar 23 08:09:20 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Remotes related links
+
+
+Links
+=====
+2.5 Git Basics - Working with Remotes
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
