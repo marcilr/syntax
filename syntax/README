@@ -83,6 +83,10 @@ remove.txt
     $ git remote rm <shortname>
   https://help.github.com/articles/removing-a-remote/
 
+remotes/
+  Working with Remotes
+  https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
 restore-delete-file.txt
   Restore deleted file in git
 
