@@ -5,6 +5,9 @@ Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+links.txt
+  Remotes related links
+
 remotes.txt
   Working with Remotes
   https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
