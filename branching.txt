@@ -72,6 +72,20 @@ $ git checkout iss53
 --git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 
+Switch Branch
+=============
+Use 'git checkout <branch>' to change branch.
+
+
+Example
+-------
+covellite:~/stash/filexfer$ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+covellite:~/stash/filexfer$
+
+
+
 
 Links
 =====
