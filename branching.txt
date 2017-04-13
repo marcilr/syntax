@@ -1,0 +1,35 @@
+branching.txt
+Created Thu Sep 24 11:23:12 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Branching
+
+
+Some people refer to the branching model in Git as its "killer feature", and
+it certainly sets Git apart in the VCS community.  Why is it so special?  The
+way Git branches is incredibly lightweight, making branching operations nearly
+instantaneous and switching back and forth between branches generally just as
+fast.  Unlike many other VCSs, Git encourages a workflow that branches and
+merges often, even multiple times in a day.  Understanding and mastering this
+feature gives you a powerful and unique tool and can literally change the way
+that you develop.
+
+git-scm.com/book/en/v1/Git-Branching
+
+
+Links
+=====
+A successful Git branching model
+by Vincent Driessen
+on Tuesday, January 05, 2010
+http://nvie.com/posts/a-successful-git-branching-model/
+
+Git Branching
+Nice graphic, why git?, decentralized but centralized, branches
+Great stuff
+https://git-scm.com/book/en/v1/Git-Branching
+
+The Configuration File 'Branch' Section
+GitGuys, git simplified?!
+http://www.gitguys.com/topics/the-configuration-file-branch-section/
