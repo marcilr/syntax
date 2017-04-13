@@ -72,6 +72,17 @@ $ git checkout iss53
 --git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 
+
+Example
+-------
+Create 'reorg' branch for filexfer.
+
+covellite:~/stash/filexfer$ git branch reorg
+marcilr@covellite:~/stash/filexfer$ git checkout reorg
+Switched to branch 'reorg'
+covellite:~/stash/filexfer$ 
+
+
 Switch Branch
 =============
 Use 'git checkout <branch>' to change branch.
