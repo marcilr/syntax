@@ -47,6 +47,31 @@ Note that when providing a <pattern>, you must use --list;
 otherwise the command is interpreted as branch creation.
 --git-scm.com/docs/git-branch
 
+Example
+-------
+covellite:~/stash/filexfer$ git branch --list
+* master
+covellite:~/stash/filexfer$
+
+
+Basic Branching
+===============
+You’ve decided that you’re going to work on issue #53 in
+whatever issue-tracking system your company uses.  To create
+a branch and switch to it at the same time, you can run the
+git checkout command with the -b switch:
+
+$ git checkout -b iss53
+Switched to a new branch "iss53"
+
+  This is shorthand for:
+
+$ git branch iss53
+$ git checkout iss53
+
+--git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+
 
 Links
 =====
@@ -64,6 +89,9 @@ Git Branching
 Nice graphic, why git?, decentralized but centralized, branches
 Great stuff
 https://git-scm.com/book/en/v1/Git-Branching
+
+Git Branching - Basic Branching and Merging
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 The Configuration File 'Branch' Section
 GitGuys, git simplified?!
