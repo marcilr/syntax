@@ -5,17 +5,6 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
-branching.txt
-  Branching
-
-git.txt
-  git - fast, scalable, distributed revision control system
-  -- distributed-is-the-new-centralized
-  https://git-scm.com/
-
-
-links.txt
-  Git related links
 
 remotes.txt
   Remotes
@@ -34,6 +23,3 @@ remotes.txt
 
 submodules.txt
   Submodules
-
-syntax/
-  Synta
