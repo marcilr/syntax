@@ -1,0 +1,38 @@
+README
+Created Thu Apr 13 10:08:02 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+add.txt
+change-history.txt
+check-settings.txt
+clone.txt
+commands.txt
+config.txt
+credentials.txt
+force-a-pull-to-overwrite-everything.txt
+force-git-push-to-overwrite-remote-files.txt
+go-to-particular-revison.txt
+help.txt
+init.txt
+links.txt
+merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
+normal-vs-bare.txt
+push.txt
+
+remotes/
+  Working with remotes
+
+remove.txt
+repo-config.txt
+restore-delete-file.txt
+revert.txt
+rm.txt
+
+submodules.txt
+  Submodules
+
+syntax.txt
+undelete.txt
