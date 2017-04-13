@@ -1,51 +1,133 @@
 README
-Created Fri Sep 16 11:43:09 AKDT 2016
-Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+Created Wed Sep 23 10:17:04 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 
 Filelist
 ========
 add.txt
+  Add remote repository
 
 branching.txt
   Branching
   Some people refer to the branching model in Git as its "killer feature",
   and it certainly sets Git apart in the VCS community.  Why is it so
-  special?  The way Git branches is incredibly lightweight, making branching
+  special?  The way Git branches is incredibly lightweight, making branching 
   operations nearly instantaneous and switching back and forth between
-  branches generally just as fast.  Unlike many other VCSs, Git encourages a
-  workflow that branches and merges often, even multiple times in a day.
+  branches generally just as fast.  Unlike many other VCSs, Git encourages 
+  a workflow that branches and merges often, even multiple times in a day.
   Understanding and mastering this feature gives you a powerful and unique
   tool and can literally change the way that you develop.
-  https://git-scm.com/book/en/v1/Git-Branching
+  --https://git-scm.com/book/en/v1/Git-Branching
 
 change-history.txt
-check-settings.txt
-clone.txt
-commands.txt
-config.txt
-credentials.txt
-force-a-pull-to-overwrite-everything.txt
-force-git-push-to-overwrite-remote-files.txt
-go-to-particular-revison.txt
-help.txt
-init.txt
-links.txt
-merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
-normal-vs-bare.txt
-push.txt
+  View the change history of a file using Git versioning
+  http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
 
-remotes/
-  Working with remotes
+check-settings.txt
+  Check settings
+  $ git config --list
+
+clone.txt
+  Clone repo
+
+commands.txt
+  Commands for git
+
+config.txt
+  The git config modifies the .git/config file.
+
+credentials.txt
+  Credentials - caching and storing
+
+force-a-pull-to-overwrite-everything.txt
+  Git - force a pull to overwrite everything, on every pull
+  git fetch origin master
+  git reset --hard FETCH_HEAD
+  git clean -df
+  http://stackoverflow.com/questions/9589814/git-force-a-pull-to-overwrite-everything-on-every-pull
+
+force-git-push-to-overwrite-remote-files.txt
+  Force "git push" to overwrite remote files
+  http://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files
+
+go-to-particular-revison.txt
+  Use git checkout <sha1> to check out a particular commit.
+  http://stackoverflow.com/questions/7539130/git-go-to-particular-revision
+
+help.txt
+  Help
+  If you ever need help while using Git, there are three ways to get the manual
+  page (manpage) help for any of the Git commands:
+
+  $ git help <verb>
+  $ git <verb> --help
+  $ man git-<verb>
+
+  For example, you can get the manpage help for the config command by running
+
+  $ git help config
+
+init.txt
+  init
+  If you're starting to track an existing project in Git, you need to go to
+  the project's directory and type:
+  $ git init
+  https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+links.txt
+  Syntax related links
+
+merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
+  Git error on commit after merge - fatal: cannot do a partial commit during a merge
+  Solution:
+    git commit -i myfile.php
+  http://stackoverflow.com/questions/5827944/git-error-on-commit-after-merge-fatal-cannot-do-a-partial-commit-during-a-mer
+
+normal-vs-bare.txt
+  Normal vs. bare repositories
+
+push.txt
+  Update remote refs along with associated objects
 
 remove.txt
-repo-config.txt
-restore-delete-file.txt
-revert.txt
-rm.txt
+  Remove a remote:
+    $ git remote rm <shortname>
+  https://help.github.com/articles/removing-a-remote/
 
-submodules.txt
+remotes/
+  Working with Remotes
+  https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+
+restore-delete-file.txt
+  Restore deleted file in git
+
+  To restore a deleted file in git:
+  $ git restore <deletedFile>
+
+rm.txt
+  Delete files or remotes
+
+revert.txt
+  To revert commit(s) to a prior commit, using new commits, use 'revert'.
+  $ git revert <commit> <commit> ...
+
+repo-config.txt
+  To alleviate the following error on server side in gti repo run:
+  $ git config receive.denyCurrentBranch ignore
+
+show-remotes.txt
+  Show remotes
+  Use 'git remote -v' to show URLS of repo's remotes.
+
+submodules/
   Submodules
 
 syntax.txt
+  Syntax
+
 undelete.txt
+  I successfully used this simple syntax to undelete a git file
+  immediately after deletion.
+  -- Find and restore a deleted file in a Git repository
+     http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
