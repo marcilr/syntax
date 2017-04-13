@@ -31,6 +31,7 @@ git branch --unset-upstream [<branchname>]
 git branch (-m | -M) [<oldbranch>] <newbranch>
 git branch (-d | -D) [-r] <branchname>…​
 git branch --edit-description [<branchname>]
+--git-scm.com/docs/git-branch
 
 
 --list
@@ -44,7 +45,7 @@ to restrict the output to matching branches.  If multiple patterns
 are given, a branch is shown if it matches any of the patterns.
 Note that when providing a <pattern>, you must use --list;
 otherwise the command is interpreted as branch creation.
-
+--git-scm.com/docs/git-branch
 
 
 Links
@@ -53,6 +54,11 @@ A successful Git branching model
 by Vincent Driessen
 on Tuesday, January 05, 2010
 http://nvie.com/posts/a-successful-git-branching-model/
+
+git-branch - List, create, or delete branches
+Nice graphic, why git?, decentralized but centralized, branches
+Great stuff
+https://git-scm.com/docs/git-branch
 
 Git Branching
 Nice graphic, why git?, decentralized but centralized, branches
