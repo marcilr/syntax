@@ -1,0 +1,55 @@
+create-repository.txt
+Created Fri May  1 14:29:48 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Create a Repository
+
+
+A repository is the basic unit of GitHub, most commonly a single project.
+Repositories can contain folders and files, including images - anything your
+project needs.  Because we recommend including a README, or a file describing
+the project, in every repository, GitHub makes it easy to add one at the same
+time you create your new repository.  It also offers other common options such
+as a license file, but we can skip that for now.
+
+
+Create repository via cli
+=========================
+1. Create desired directory for repo:
+$ cd ~/git/
+$ mkdir gnano
+
+2. Initialize git repo:
+covellite:~/git$ cd ~/git/gnano
+covellite:~/git/gnano$ ls
+covellite:~/git/gnano$ git init
+Initialized empty Git repository in /home/marcilr/git/gnano/.git/
+covellite:~/git/gnano$
+
+3. See status of repo:
+covellite:~/git/gnano$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+covellite:~/git/gnano$
+
+
+To create a new repository (via online interface)
+========================== 
+1. Click the  icon next to your username, top-right.
+2. Name your repository hello-world.
+3. Write a short description.
+4. Select Initialize this repository with a README.
+5. Click Create repository. Boom, repository!
+
+github.com/
+
+
+Links
+=====
+Hello World
+10 minute read
+https://guides.github.com/activities/hello-world/
