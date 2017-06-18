@@ -123,6 +123,17 @@ init.txt
 links.txt
   Syntax related links
 
+log.txt
+  Log
+
+  You can see the log with:
+  $git log
+
+  https://wiki.debian.org/UsingGit
+
+make-a-commit.txt
+  Make a commit
+
 merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
   Git error on commit after merge - fatal: cannot do a partial commit during a merge
   Solution:
