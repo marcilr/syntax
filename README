@@ -24,7 +24,6 @@ change-history.txt
   View the change history of a file using Git versioning
   http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
 
-
 check-settings.txt
   Check Settings
   Getting Started - First-Time Git Setup
@@ -241,8 +240,26 @@ syntax.txt
 TODO
   Items for git syntax
 
+transfer-protocol.txt
+  Transfer Protocol
+  Git has a number of different transfer protocols you can use. The previous
+  example uses the https:// protocol, but you may also see git:// or
+  user@server:path/to/repo.git , which uses the SSH transfer protocol.
+  "Getting Git on a Server" will introduce all of the available options the server
+  can set up to access your Git repository and the pros and cons of each.
+  progit-en.478.pdf, Pro Git, p. 45
+
 undelete.txt
   I successfully used this simple syntax to undelete a git file
   immediately after deletion.
   -- Find and restore a deleted file in a Git repository
      http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
+
+workflow.txt
+  The basic Git workflow goes something like this:
+  1. You modify files in your working directory.
+  2. You stage the files, adding snapshots of them to your staging area.
+  3. You do a commit, which takes the files as they are in the staging area and
+     stores that snapshot permanently to your Git directory.
+  progit-en.478.pdf, Pro Git, p. 35
+
