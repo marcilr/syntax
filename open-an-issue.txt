@@ -1,0 +1,24 @@
+open-an-issue.txt
+Created Fri May  1 14:38:07 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Open an Issue for README edits
+
+1. Click the  Issues tab from the sidebar.
+2. Click New Issue.
+3. Give your Issue a title and description.
+
+Click Submit new Issue when you're done.  Now this issue has a permanent home
+(URL) that you can reference even after it is closed.
+
+Next, work towards editing your README and closing this issue.
+
+github.com/
+
+
+Links
+=====
+Hello World
+10 minute read
+https://guides.github.com/activities/hello-world/
