@@ -8,6 +8,9 @@ Filelist
 add.txt
   Add to repository
 
+branching/
+  Branching
+
 branching.txt
   Branching
   Some people refer to the branching model in Git as its "killer feature",
