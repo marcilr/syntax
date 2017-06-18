@@ -1,0 +1,30 @@
+README
+Created Fri May  1 14:31:47 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Filelist
+========
+branch.txt 
+  Branch
+  When you create a repository, by default it has one branch with the name
+  master.  You could keep working on this branch and have only one, that's
+  fine.  But if you have another feature or idea you want to work on, you can
+  create another branch, starting from master, so that you can leave master in
+  its working state.
+
+create-a-branch.txt
+  Create a Branch
+  https://guides.github.com/activities/hello-world/
+
+links.txt
+  Branch related issues
+
+naming-rules.txt
+  Rules when naming Git branches
+  http://stackoverflow.com/questions/28183115/rules-when-naming-git-branches?lq=1
+
+show-branch.txt
+  show-branch syntax
+  http://git-scm.com/docs/git-show-branch
+
