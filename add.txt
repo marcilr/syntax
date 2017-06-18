@@ -1,0 +1,51 @@
+add.txt
+Created Mon May  4 13:05:09 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Add to repository
+
+
+We still don't have anything in the repository, though.  So, let's add the
+source code:
+
+
+$ git add .
+
+The "." is common Unix-syntax -- it means "current directory".  So, we're
+effectively adding everything.  Now, check git status again. You'll see that
+something changed.  What you see now is the status of the index.
+...
+Now, check git status again. You'll see Changes to be committed (the index)
+and Untracked files.
+
+debian.org/UsingGit
+
+
+Examples
+========
+covellite:~/git/gnano$ git add gnano 
+covellite:~/git/gnano$ git commit
+gnano
+  Python wrapper for nano for editing gpg encrypted files.
+  Very nice.
+  http://stackoverflow.com/posts/12289967/revisions
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   gnano
+#
+ctrl-x <=== To save
+ 1 file changed, 130 insertions(+)
+ create mode 100755 gnano
+covellite:~/git/gnano$
+
+
+Links
+=====
+UsingGit
+https://wiki.debian.org/UsingGit
