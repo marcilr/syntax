@@ -1,0 +1,63 @@
+show.txt
+Created Mon May  4 13:30:25 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Show
+
+
+It will show you the committer (with the data you set before), the timestamp,
+and the commit hash.
+
+You can also see the last commit with:
+  $ git show
+
+It will automatically open $PAGER (more, less, ...), and show you the contents
+of your last commit.  git show also accepts a hash as argument. My commit hash
+is: 1aab8486d20490st 7-8 characters are enough.  So, we can also use: for each
+of you.  It isn't necessary to write the full hash -- usually the first 7-8
+characters are enough. So, we can also use:
+  $ git show 11aab848
+
+git also supports a number of symbolic names, but I won't go into this, since I
+believe it's more than basic (I'm talking about HEAD, HEAD^, HEAD~2 and so on)
+
+debian.org/UsingGit
+
+
+Examples
+========
+covellite:~/git/gnano$ git show
+commit a22c124e6a3e933040b086dc0b40091826500293
+Author: Raymond Marcil <marcilr@gmail.com>
+Date:   Mon May 4 13:21:59 2015 -0800
+
+    gnano
+      Python wrapper for nano for editing gpg encrypted files.
+      Very nice.
+      http://stackoverflow.com/posts/12289967/revisions
+
+diff --git a/gnano b/gnano
+new file mode 100755
+index 0000000..3d1a2b8
+--- /dev/null
++++ b/gnano
+@@ -0,0 +1,130 @@
++#!/usr/bin/python
++# Created Thu Jan  2 11:03:55 AKST 2014
++#
++# gnano - Python wrapper for nano for editing gpg encrypted files.
++#         Very nice.
++#
+...
++    os.remove(bakFile)
+(END)
+click q to quit
+covellite:~/git/gnano$ git show gnano
+
+
+Links
+=====
+UsingGit
+https://wiki.debian.org/UsingGit
+
