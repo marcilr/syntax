@@ -5,3 +5,9 @@ Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 Syntax
 
+
+Thu Mar 20 10:08:22 AKDT 2014
+=============================
+From discussion with GCI Whit Reeve git supports "push" to push changes
+to another repo or "pull" to pull in chanages from another repo.
+
