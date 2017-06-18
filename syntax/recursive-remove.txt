@@ -1,0 +1,40 @@
+recursive-remove.txt
+Created Sat Jun 17 23:09:17 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Recursive remove
+
+
+You can try this:
+  $ git rm -rf <directory_name>
+
+It will force delete the directory.
+--stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
+
+
+Example
+=======
+To recursively remove .svn directory in current working directory:
+
+malachite:~/git/media/mythtv/hardware/mobo/gigabyte/GA-F2A75M-D3H$ git rm -rf .svn/
+rm 'hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/entries'
+rm 'hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/format'
+rm 'hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/pristine/1c/1c4af076172e30d41b255d0528274814f546d621.svn-base'
+rm 'hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/pristine/b0/b0c8348bf8fc492644382815d2ac7844db1a2543.svn-base'
+rm 'hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/wc.db'
+marcilr@malachite:~/git/media/mythtv/hardware/mobo/gigabyte/GA-F2A75M-D3H$ git commit
+[master 25d0c08] Deprecated
+ 5 files changed, 45 deletions(-)
+ delete mode 100644 hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/entries
+ delete mode 100644 hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/format
+ delete mode 100644 hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/pristine/1c/1c4af076172e30d41b255d0528274814f546d621.svn-base
+ delete mode 100644 hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/pristine/b0/b0c8348bf8fc492644382815d2ac7844db1a2543.svn-base
+ delete mode 100644 hardware/mobo/gigabyte/GA-F2A75M-D3H/.svn/wc.db
+malachite:~/git/media/mythtv/hardware/mobo/gigabyte/GA-F2A75M-D3$
+
+
+Links
+=====
+How to remove a directory from git repository?
+https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
