@@ -35,7 +35,14 @@ cli.txt
   progit-en.478.pdf, Pro Git, p. 36
 
 clone.txt
-  Clone repo
+  Clone repository
+  If you want to get a copy of an existing Git repository - for example, a project
+  you'd like to contribute to - the command you need is git clone . If you're
+  familiar with other VCS systems such as Subversion, you'll notice that the command
+  is "clone" and not "checkout".  This is an important distinction - instead
+  of getting just a working copy, Git receives a full copy of nearly all data that
+  the server has.
+  progit-en.478.pdf, Pro Git, p. 44
 
 commands.txt
   Commands for git
