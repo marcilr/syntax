@@ -1,0 +1,18 @@
+diff.txt
+Created Mon May  4 13:44:13 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Diff
+
+
+See differences with diff or nothing if there are no differences.
+
+debian.org/UsingGit
+
+
+Links
+=====
+UsingGit
+https://wiki.debian.org/UsingGit
+
