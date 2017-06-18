@@ -1,0 +1,19 @@
+merge-your-pull-request.txt
+Created Fri May  1 15:57:36 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Merge your Pull Request
+
+
+It's time to bring your changes together - merge your readme-edits branch into
+the master branch.
+
+1. Click the green button to merge the changes into master.
+2. Click Confirm merge.
+3. Go ahead and delete the branch, since its changes have been incorporated,
+with the Delete branch button in the purple box.
+
+If you revisit the issue you opened, it's now closed! Because you included
+"fixes #1" in your Pull Request title, GitHub took care of closing that
+issue when the Pull Request was merged!
