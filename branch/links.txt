@@ -1,0 +1,28 @@
+links.txt
+Created Mon May  4 14:18:55 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Branch related links
+
+
+Links
+=====
+A successful Git branching model
+by Vincent Driessen
+on Tuesday, January 05, 2010
+Good ideas here.
+http://nvie.com/posts/a-successful-git-branching-model/
+
+git branch naming best practices
+http://stackoverflow.com/questions/273695/git-branch-naming-best-practices
+
+git-show-branch - Show branches and their commits
+git --everything-is-local
+http://git-scm.com/docs/git-show-branch
+
+What are the differences between 'git pull' and 'git fetch'?
+o In the simplest terms, git pull does a git fetch followed by a git merge.
+o A git pull is what you would do to bring a local branch up-to-date with 
+  its remote version, while also updating your other remote-tracking branches.
+http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch?rq=1
