@@ -111,6 +111,8 @@ help.txt
 
   $ git help config
 
+  progit-en.478.pdf, Pro Git, p. 41
+
 init.txt
   init
   If you're starting to track an existing project in Git, you need to go to
