@@ -81,6 +81,19 @@ force-git-push-to-overwrite-remote-files.txt
   Force "git push" to overwrite remote files
   http://stackoverflow.com/questions/10510462/force-git-push-to-overwrite-remote-files
 
+gitignore.txt
+  Ignoring Files
+
+  Often, you'll have a class of files that you don't want Git to automatically
+  add or even show you as being untracked.  These are generally automatically
+  generated files such as log files or files produced by your build system.  In
+  such cases, you can create a file listing patterns to match them named
+ .gitignore .  Here is an example .gitignore file:
+
+  $ cat .gitignore
+  *.[oa]
+  *~
+
 go-to-particular-revison.txt
   Use git checkout <sha1> to check out a particular commit.
   http://stackoverflow.com/questions/7539130/git-go-to-particular-revision
