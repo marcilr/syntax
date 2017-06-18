@@ -186,6 +186,9 @@ submodules/
 syntax.txt
   Syntax
 
+TODO
+  Items for git syntax
+
 undelete.txt
   I successfully used this simple syntax to undelete a git file
   immediately after deletion.
