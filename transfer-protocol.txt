@@ -1,0 +1,29 @@
+transfer-protocol.txt
+Created Mon May  4 15:52:37 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Transfer Protocol
+
+
+Git has a number of different transfer protocols you can use. The previous
+example uses the https:// protocol, but you may also see git:// or
+user@server:path/to/repo.git , which uses the SSH transfer protocol.
+"Getting Git on a Server" will introduce all of the available options the server
+can set up to access your Git repository and the pros and cons of each.
+
+
+progit-en.478.pdf, Pro Git, p. 45
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
+
+
