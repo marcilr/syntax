@@ -211,6 +211,27 @@ repo-config.txt
   To alleviate the following error on server side in gti repo run:
   $ git config receive.denyCurrentBranch ignore
 
+server.txt
+  Setting up git server.
+
+show.txt
+  Show
+
+  It will show you the committer (with the data you set before),
+  the timestamp, and the commit hash.
+
+  You can also see the last commit with:
+  $ git show
+    or
+  $ git show 11aab848 <== partial hash
+
+  https://wiki.debian.org/UsingGit
+
+status.txt
+  Status
+  View status of files
+  https://wiki.debian.org/UsingGit
+
 show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
