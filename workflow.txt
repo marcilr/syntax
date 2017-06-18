@@ -1,0 +1,29 @@
+workflow.txt
+Created Mon May  4 10:31:13 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+The basic Git workflow goes something like this:
+1. You modify files in your working directory.
+2. You stage the files, adding snapshots of them to your staging area.
+3. You do a commit, which takes the files as they are in the staging area and
+   stores that snapshot permanently to your Git directory.
+
+If a particular version of a file is in the Git directory, it's considered
+committed. If it's modified but has been added to the staging area, it is
+staged.  And if it was changed since it was checked out but has not been
+staged, it is modified.
+
+progit-en.478.pdf, p. 35
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
+
