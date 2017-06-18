@@ -58,6 +58,10 @@ commit.txt
 config.txt
   The git config modifies the .git/config file.
 
+create-repository.txt
+  Create repository
+  https://guides.github.com/activities/hello-world/
+
 credentials.txt
   Credentials - caching and storing
 
