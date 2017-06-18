@@ -26,6 +26,11 @@ remotes.txt
   this section, we'll cover some of these remote-management skills.
   http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
 
+remove.txt
+  Remove a remote:
+    $ git remote rm <shortname>
+  https://help.github.com/articles/removing-a-remote/
+
 show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
