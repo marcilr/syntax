@@ -172,9 +172,9 @@ recursive-remove.txt
   https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
 
 remove.txt
-  Remove a remote:
-    $ git remote rm <shortname>
-  https://help.github.com/articles/removing-a-remote/
+  Remove file from repo
+  UsingGit
+  https://wiki.debian.org/UsingGit
 
 remotes/
   Working with Remotes
