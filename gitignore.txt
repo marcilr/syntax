@@ -1,0 +1,79 @@
+gitignore.txt
+Created Tue May  5 08:01:21 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+Ignoring Files
+
+Often, you'll have a class of files that you don't want Git to automatically
+add or even show you as being untracked.  These are generally automatically
+generated files such as log files or files produced by your build system.  In
+such cases, you can create a file listing patterns to match them named
+.gitignore .  Here is an example .gitignore file:
+
+  $ cat .gitignore
+  *.[oa]
+  *~
+
+The first line tells Git to ignore any files ending in ".o" or ".a" - object
+and archive files that may be the product of building your code.  The second
+line tells Git to ignore all files that end with a tilde ( ~ ), which is used
+by many text editors such as Emacs to mark temporary files.  You may also
+include a log, tmp, or pid directory; automatically generated documentation;
+and so on.  Setting up a .gitignore file before you get going is generally a
+good idea so you don't accidentally commit files that you really don't want in
+your Git repository.
+
+The rules for the patterns you can put in the .gitignore file are as follows:
+
+o Blank lines or lines starting with # are ignored.
+o tandard glob patterns work.
+o You can end patterns with a forward slash ( / ) to specify a directory.
+o You can negate a pattern by starting it with an exclamation point ( ! ).
+
+Glob patterns are like simplified regular expressions that shells use.  An
+asterisk ( * ) matches zero or more characters; [abc] matches any character
+inside the brackets (in this case a, b, or c); a question mark ( ? ) matches a
+single character; and brackets enclosing characters separated by a
+hyphen( [0-9] ) matches any character between them (in this case 0 through 9).
+You can also use two asterisks to match nested directories; a/**/z would match
+a/z , a/b/z , a/b/c/z , and so on.
+
+Here is another example .gitignore file:
+
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the root TODO file, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt
+
+---------------------------------------------------------------------------
+GitHub maintains a fairly comprehensive list of good .gitignore file
+examples for dozens of projects and languages at https://github.com/github/
+gitignore if you want a starting point for your project.
+---------------------------------------------------------------------------
+
+progit-en.478.pdf, Pro Git, p. 50-51
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
+
