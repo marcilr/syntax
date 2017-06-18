@@ -90,6 +90,17 @@ normal-vs-bare.txt
 push.txt
   Update remote refs along with associated objects
 
+recursive-remove.txt
+  Recursive remove
+
+  You can try this:
+    $ git rm -rf <directory_name>
+
+  It will force delete the directory.
+  
+  How to remove a directory from git repository?
+  https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository
+
 remove.txt
   Remove a remote:
     $ git remote rm <shortname>
