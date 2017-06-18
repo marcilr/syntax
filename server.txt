@@ -1,0 +1,16 @@
+server.txt
+Created Tue May  5 14:34:01 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Server
+
+
+
+
+Links
+=====
+Git on the Server - Setting Up the Server
+Details for setting up ssh accessable gti server.
+http://git-scm.com/book/it/v2/Git-on-the-Server-Setting-Up-the-Server
+
