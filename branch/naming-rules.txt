@@ -1,0 +1,49 @@
+naming-rules.txt
+Created Mon May  4 14:42:56 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Naming rules
+
+
+The rules are rather complicated, but when you consider that branches end up
+as files on the filesystem, they make sense:
+
+Git imposes the following rules on how references are named:
+
+1. They can include slash / for hierarchical (directory) grouping, but no
+   slash-separated component can begin with a dot . or end with the sequence 
+  .lock.
+
+2. They must contain at least one /.  This enforces the presence of a category
+   like heads/, tags/ etc.  but the actual names are not restricted.  If the
+    --allow-onelevel option is used, this rule is waived.
+
+3. They cannot have two consecutive dots .. anywhere.
+
+4. They cannot have ASCII control characters (i.e. bytes whose values are
+   lower than \040, or \177 DEL), space, tilde ~, caret ^, or colon : anywhere.
+
+5. They cannot have question-mark ?, asterisk *, or open bracket [ anywhere.
+   See the --refspec-pattern option below for an exception to this rule.
+
+6. They cannot begin or end with a slash / or contain multiple consecutive
+   slashes (see the --normalize option below for an exception to this rule)
+
+7. They cannot end with a dot ..
+
+8. They cannot contain a sequence @{.
+
+9. They cannot be the single character @.
+
+10. They cannot contain a \.
+
+Note that this is for naming of references, not branches.  A branch is a
+reference that looks like refs/heads/<branchname>.
+
+
+Links
+=====
+Rules when naming Git branches [duplicate]
+http://stackoverflow.com/questions/28183115/rules-when-naming-git-branches?lq=1
+
