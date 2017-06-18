@@ -24,9 +24,15 @@ change-history.txt
   View the change history of a file using Git versioning
   http://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
 
+
 check-settings.txt
-  Check settings
-  $ git config --list
+  Check Settings
+  Getting Started - First-Time Git Setup
+  http://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+cli.txt
+  The Command Line
+  progit-en.478.pdf, Pro Git, p. 36
 
 clone.txt
   Clone repo
