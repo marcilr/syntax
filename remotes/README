@@ -34,3 +34,9 @@ remove.txt
 show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
+
+working-with-remotes.txt
+  2.5 Git Basics - Working with Remotes
+  Working with Remotes
+  Solid syntax on git clone, remote, fetch, and push.
+  http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
