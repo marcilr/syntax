@@ -1,22 +1,41 @@
 help.txt
-Created Wed Sep 23 15:37:23 AKDT 2015
+Created Mon May  4 15:37:50 AKDT 2015
 Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 
 Help
+
+
 If you ever need help while using Git, there are three ways to get the manual
 page (manpage) help for any of the Git commands:
-
-$ git help <verb>
-$ git <verb> --help
-$ man git-<verb>
+  $ git help <verb>
+  $ git <verb> --help
+  $ man git-<verb>
 
 For example, you can get the manpage help for the config command by running
+  $ git help config
 
-$ git help config
+These commands are nice because you can access them anywhere, even offline.  If the
+manpages and this book aren’t enough and you need in-person help,p, you can try the
+#git or #github channel on the Freenode IRC server (irc.free-node.net).  These
+channels are regularly filled with hundreds of people who are
+all very knowledgeable about Git and are often willing to help
+
+progit-en.478.pdf, Pro Git, p. 41
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
 
 
 Links
 =====
-Getting Help
-https://git-scm.com/book/en/v2/Getting-Started-Getting-Help
+Getting Started - Getting Help
+http://git-scm.com/book/en/v2/Getting-Started-Getting-Help
