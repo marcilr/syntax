@@ -34,4 +34,3 @@ remove.txt
 show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
-
