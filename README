@@ -140,8 +140,22 @@ merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
     git commit -i myfile.php
   http://stackoverflow.com/questions/5827944/git-error-on-commit-after-merge-fatal-cannot-do-a-partial-commit-during-a-mer
 
+merge-your-pull-request.txt
+  Merge your Pull Request
+
 normal-vs-bare.txt
   Normal vs. bare repositories
+
+open-an-issue.txt
+  Open an Issue for README edits
+
+  1. Click the  Issues tab from the sidebar.
+  2. Click New Issue.
+  3. Give your Issue a title and description.
+
+  Click Submit new Issue when you're done.  Now this issue has a permanent home
+  (URL) that you can reference even after it is closed.
+  https://guides.github.com/activities/hello-world/
 
 push.txt
   Update remote refs along with associated objects
