@@ -232,10 +232,6 @@ status.txt
   View status of files
   https://wiki.debian.org/UsingGit
 
-show-remotes.txt
-  Show remotes
-  Use 'git remote -v' to show URLS of repo's remotes.
-
 submodules/
   Submodules
 
