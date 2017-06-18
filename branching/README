@@ -13,6 +13,18 @@ branch.txt
   create another branch, starting from master, so that you can leave master in
   its working state.
 
+branching.txt
+  Branching
+  Some people refer to the branching model in Git as its "killer feature",
+  and it certainly sets Git apart in the VCS community.  Why is it so
+  special?  The way Git branches is incredibly lightweight, making branching
+  operations nearly instantaneous and switching back and forth between
+  branches generally just as fast.  Unlike many other VCSs, Git encourages
+  a workflow that branches and merges often, even multiple times in a day.
+  Understanding and mastering this feature gives you a powerful and unique
+  tool and can literally change the way that you develop.
+  --https://git-scm.com/book/en/v1/Git-Branching
+
 create-a-branch.txt
   Create a Branch
   https://guides.github.com/activities/hello-world/
