@@ -1,0 +1,57 @@
+status.txt
+Created Mon May  4 13:39:45 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Status
+
+
+View status of files
+
+Short Status
+============
+While the git status output is pretty comprehensive, it’s also quite wordy. Git
+also has a short status flag so you can see your changes in a more compact way.
+If you run git status -s or git status --short you get a far more simpli-
+fied output from the command.
+  $ git status -s
+  M README
+  MM Rakefile
+  A lib/git.rb
+  M lib/simplegit.rb
+  ?? LICENSE.txt
+
+Displays nothing if not changes.
+
+progit-en.478.pdf, Pro Git, p. 41
+
+
+Examples
+========
+Status showing new files to push:
+
+covellite:~/github/gnano$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+covellite:~/github/gnano$
+
+
+covellite:~/git/gnano$ git status
+On branch master
+nothing to commit, working directory clean
+covellite:~/git/gnano$ 
+
+progit-en.478.pdf, Pro Git, p. 41
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
