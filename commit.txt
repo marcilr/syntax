@@ -1,0 +1,78 @@
+commit.txt
+Created Mon May  4 13:16:48 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Commit file to repo
+
+
+To commit the files in the index: this will create a commit, with a hash,
+and will be kept in the repository history.  Let's do it:
+
+$ git commit
+  or
+git commit -m 'my commit message'
+
+  -m is a shortcut for message -- it avoids opening up $EDITOR
+
+$ git commit -a -m "Some message"
+  The -a switch will add everything to the index (from the tracked files,
+  it won't touch untracked ones). 
+
+debian.org/UsingGit
+
+
+Examples
+========
+Commit for changed file with message in gnano project:
+  covellite:~/github/gnano$ git commit README.md -m "Added filelist"
+  [master 3bfba7b] Added filelist
+   1 file changed, 7 insertions(+)
+  covellite:~/github/gnano$
+
+
+For one line commit to updated file:
+  git add . && git commit -am "comment"
+
+  git add -A, git commit in one command?
+  http://stackoverflow.com/questions/4298960/git-add-a-git-commit-in-one-command
+
+covellite:~/git/gnano$ git add gnano 
+covellite:~/git/gnano$ git commit
+gnano
+  Python wrapper for nano for editing gpg encrypted files.
+  Very nice.
+  http://stackoverflow.com/posts/12289967/revisions
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   gnano
+#
+ctrl-x <=== To save
+ 1 file changed, 130 insertions(+)
+ create mode 100755 gnano
+marcilr@covellite:~/git/gnano$
+
+
+Use "git add" and/or "git commit -a":
+$ git commit -a -m 'added new benchmarks'
+[master 83e38c7] added new benchmarks
+ 1 file changed, 5 insertions(+), 0 deletions(-)
+
+Notice how you don't have to run git add on the "CONTRIBUTING.md" file in
+this case before you commit.
+
+git-scm.com/
+
+
+Links
+=====
+Git Basics - Recording Changes to the Repository
+http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+
+UsingGit
+https://wiki.debian.org/UsingGit
