@@ -1,0 +1,42 @@
+cli.txt
+Created Mon May  4 10:38:07 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+The Command Line
+
+
+There are a lot of different ways to use Git.  There are the original command
+line tools, and there are many graphical user interfaces of varying
+capabilities.  For this book, we will be using Git on the command line.  For
+one, the command line is the only place you can run all Git commands - most of
+the GUIs only implement some subset of Git functionality for simplicity.  If
+you know how to run the command line version, you can probably also figure out
+how to run the GUI version, while the opposite is not necessarily true.  Also,
+while your choice of graphical client is a matter of personal taste, all users
+will have the command-line tools installed and available.
+
+progit-en.478.pdf, Pro Git, p. 36
+
+
+Commands
+========
+
+Command                     Description
+-----------------------------------------------------------------------
+git add .                   Add all files in current directory to repo.
+git add <file>              Add file to repo.
+
+git rm --chached <file>     Remove file from repo index.
+
+
+Filelist
+========
+progit-en.478.pdf
+  Getting Started - The Command Line
+  Pointer to Pro Git, Everything you need to know about git
+  by Scott Chacon and Ben Straub
+  Apress
+  http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+  https://progit2.s3.amazonaws.com/en/2015-05-02-7ddee/progit-en.478.pdf
+
