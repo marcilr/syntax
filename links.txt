@@ -1,5 +1,5 @@
 links.txt
-Created Wed Sep 23 15:33:46 AKDT 2015
+Created Fri May  1 14:45:01 AKDT 2015
 Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 
@@ -20,12 +20,46 @@ https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 Getting a Git Repository
 https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
+Getting Started - The Command Line
+Pointer to Pro Git, Everything you need to know about git
+by Scott Chacon and Ben Straub
+Apress
+http://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
+
+Git Cheat Sheet
+http://ktown.kde.org/~zrusin/git/git-cheat-sheet.svg
+
+Git Data Transport Commands
+http://assets.osteele.com/images/2008/git-transport.png
+
+git - the simple guide
+just a simple guide for getting started with git. no deep shit ;)
+http://rogerdudler.github.io/git-guide/
+
 Git Tools - Stashing and Cleaning
 https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
 
 GitHub for Developers: Training Manual
 From gti webinar on Mon Mar 20 08:10:58 AKDT 2017
 https://github.github.io/training-manual/#_using_branches
+
+Hello Work
+10 mihnutes read
+This guide walks you through the GitHub Essentials: Repositories, Branches,
+Commits, Issues and Pull Requests.
+https://guides.github.com/activities/hello-world/
+
+How To Install Git on Debian 7
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-7
+
+How to setup git server over http
+ftp://www.kernel.org/pub/software/scm/git/docs/howto/setup-git-server-over-http.html
+
+How To Use Git Branches
+https://www.digitalocean.com/community/tutorials/how-to-use-git-branches
+
+How To Use Git Effectively
+https://www.digitalocean.com/community/tutorials/how-to-use-git-effectively
 
 Merging vs. Rebasing
 https://www.atlassian.com/git/tutorials/merging-vs-rebasing
@@ -58,6 +92,9 @@ The git remote rm command takes one argument:
 > A remote name, for example, destination
 https://help.github.com/articles/removing-a-remote/
 
+Setting your email in Git (git config command)
+https://help.github.com/articles/setting-your-email-in-git/
+
 Start a new git repository
 http://kbroman.org/github_tutorial/pages/init.html
 
@@ -68,6 +105,12 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
 Think Like (a) Git
 A Guide for the Perplexed
 http://think-like-a-git.net/   <===
+
+UsingGit
+https://wiki.debian.org/UsingGit
+
+Viewing contributions on your profile page
+https://help.github.com/articles/viewing-contributions-on-your-profile-page/
 
 What is the difference between `git merge` and `git merge --no-ff`?
 http://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
