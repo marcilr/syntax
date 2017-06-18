@@ -65,6 +65,11 @@ create-repository.txt
 credentials.txt
   Credentials - caching and storing
 
+diff.txt
+  Diff
+  See differences with diff or nothing if there are no differences.
+  https://wiki.debian.org/UsingGit
+
 force-a-pull-to-overwrite-everything.txt
   Git - force a pull to overwrite everything, on every pull
   git fetch origin master
