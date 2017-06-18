@@ -1,0 +1,26 @@
+remove.txt
+Created Mon May  4 13:12:54 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Remove file from repo
+
+git rm --cached <file>
+
+
+Examples
+========
+We could still remove things from the index, without leaving traces in the
+repository history.  Let's do it!  Let's remove AUTHORS from the index, and
+put it back to the untracked status:
+
+git rm --cached AUTHORS
+
+debian.org/UsingGit
+
+
+
+Links
+=====
+UsingGit
+https://wiki.debian.org/UsingGit
