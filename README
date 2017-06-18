@@ -47,6 +47,14 @@ clone.txt
 commands.txt
   Commands for git
 
+commit.txt
+  Commit file to repo
+  To commit the files in the index: this will create a commit, with a hash,
+  and will be kept in the repository history.  Let's do it:
+  $ git commit
+
+  https://wiki.debian.org/UsingGit
+
 config.txt
   The git config modifies the .git/config file.
 
