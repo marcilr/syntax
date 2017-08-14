@@ -3,6 +3,14 @@ Created Mon Dec  5 15:05:16 AKST 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
+Undelete file
+
+
+$ git checkout <deletedFile>
+
+--stackoverflow.com/questions/953481/
+
+
 I successfully used this simple syntax to undelete a git file
 immediately after deletion.
 
