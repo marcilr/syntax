@@ -84,4 +84,6 @@ Links
 Find and restore a deleted file in a Git repository
 http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repository
 
+git recover deleted file where no commit was made after the delete
+https://stackoverflow.com/questions/11956710/git-recover-deleted-file-where-no-commit-was-made-after-the-delete
 
