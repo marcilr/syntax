@@ -1,0 +1,7 @@
+merging-repos.txt
+Created Wed Aug 23 08:06:57 AKDT 2017
+Copyright (C) 2017 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Merging separate git repositories
+
