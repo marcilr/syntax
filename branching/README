@@ -39,10 +39,12 @@ naming-rules.txt
   Rules when naming Git branches
   http://stackoverflow.com/questions/28183115/rules-when-naming-git-branches?lq=1
 
+push.txt
+  Push back to source repo 
+
 show-branch.txt
   show-branch syntax
   http://git-scm.com/docs/git-show-branch
 
 view-branches.txt
   View Branches
-
