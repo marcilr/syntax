@@ -1,0 +1,19 @@
+push.txt
+Created Mon Mar  5 12:55:19 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Push back to source repo
+
+
+To push all branches to remote, and --set-upstream tracking
+correctly for you:
+
+$ git push --all -u
+
+
+Links
+=====
+How do I push a new local branch to a remote Git
+repository and track it too?
+https://stackoverflow.com/questions/2765421/how-do-i-push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too
