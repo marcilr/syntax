@@ -28,6 +28,63 @@ bug fixes and feature work separate from our master (production) branch.
 When a feature or fix is ready, the branch is merged into master.
 
 
+Example
+=======
+Create develope branch:
+
+1. List all branches:
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+i.e. No branches yet.
+
+2. Create develope branch:
+$ git checkout -b develop
+Switched to a new branch 'develop'
+$
+
+4. List all branches:
+$ git branch -a
+* develop
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+develop branch created.  Looks good.
+
+5. Switch back and forth between your two branches,
+by using the git checkout command:
+
+Switch to master branch:
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+$
+
+$ git branch -a
+  develop
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+Switch to develop branch:
+$ git checkout develop
+Switched to branch 'develop'
+
+$ git branch -a
+* develop
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+
+
 Links
 =====
 Hello World
