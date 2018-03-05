@@ -40,7 +40,8 @@ naming-rules.txt
   http://stackoverflow.com/questions/28183115/rules-when-naming-git-branches?lq=1
 
 push.txt
-  Push back to source repo 
+  Push back to source repo
+  $ git push --all -u
 
 show-branch.txt
   show-branch syntax
