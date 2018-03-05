@@ -1,0 +1,26 @@
+view-branches.txt
+Created Mon Mar  5 10:27:45 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+View Branches
+
+
+To view all branches:
+
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+The asterisk next to "master" in the first line of the output
+indicates that we are currently on that branch.  The second
+line simply indicates that on our remote, named origin, there
+is a single branch, also called master.
+
+
+Links
+=====
+Viewing branches
+How To Use Git Branches
+https://www.digitalocean.com/community/tutorials/how-to-use-git-branches
