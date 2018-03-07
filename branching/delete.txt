@@ -1,0 +1,50 @@
+delete.txt
+Created Wed Mar  7 14:42:47 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Delete branch
+
+Executive Summary
+=================
+$ git push -d <remote_name> <branch_name>
+$ git branch -d <branch_name>
+
+Note that in most cases the remote name is origin.
+
+
+Delete Local Branch
+===================
+To delete the local branch use one of the following:
+
+$ git branch -d branch_name
+$ git branch -D branch_name
+
+Note: The -d option is an alias for --delete, which
+only deletes the branch if it has already been fully
+merged in its upstream branch.  You could also use -D,
+which is an alias for --delete --force, which deletes
+the branch "irrespective of its merged status."
+[Source: man git-branch]
+
+--How do I delete a Git branch both locally and remotely?
+  https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely
+
+
+Example
+=======
+$ git branch -D develop
+Deleted branch develop (was 27cb6e2).
+$
+
+$ git push origin :develop
+To ssh://source.gci.com/nit/psap
+ - [deleted]         develop
+$
+
+
+
+Links
+=====
+How do I delete a Git branch both locally and remotely?
+https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely
