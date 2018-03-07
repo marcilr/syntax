@@ -1,4 +1,4 @@
-create-a-branch.txt
+create.txt
 Created Fri May  1 14:49:28 AKDT 2015
 Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
@@ -41,7 +41,7 @@ $
 
 i.e. No branches yet.
 
-2. Create develope branch:
+2. Create develop branch and switch to it:
 $ git checkout -b develop
 Switched to a new branch 'develop'
 $
