@@ -28,6 +28,9 @@ branching.txt
 create.txt
   Create a new branch
 
+delete.txt
+  Delete branch local or remote 
+
 links.txt
   Branch related issues
 
