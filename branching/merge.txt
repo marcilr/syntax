@@ -1,0 +1,53 @@
+merge.txt
+Created Wed Mar  7 14:49:53 AKST 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Merge branch
+
+1. Verify on correct branch to merge to with 'git status':
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+$
+
+or
+
+$ git branch -a
+  develop
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+$
+
+If needed switch to receiving branch with:
+$ git checkout <receiving> 
+
+
+2. Fetch latest remote commits:
+$ git fetch
+
+Ensure the master branch has the latest updates by executing:
+$ git pull
+Already up-to-date.
+$
+
+3. Once the prior "preparing to merge" steps have been 
+done merge with:
+$ git merge <branch name>
+
+Example:
+$ git merge develop
+Already up-to-date.
+
+--Git Merge
+  https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+
+Links
+=====
+Git Merge
+https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+
