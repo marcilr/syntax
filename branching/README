@@ -34,6 +34,10 @@ delete.txt
 links.txt
   Branch related issues
 
+merge.txt
+  Git Merge
+  https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
 naming-rules.txt
   Rules when naming Git branches
   http://stackoverflow.com/questions/28183115/rules-when-naming-git-branches?lq=1
