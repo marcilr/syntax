@@ -29,7 +29,7 @@ create-a-branch.txt
   Create a Branch
   https://guides.github.com/activities/hello-world/
 
-create-new-branch.txt
+create.txt
   Create a new branch
 
 links.txt
@@ -47,5 +47,5 @@ show-branch.txt
   show-branch syntax
   http://git-scm.com/docs/git-show-branch
 
-view-branches.txt
+view.txt
   View Branches
