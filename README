@@ -67,6 +67,9 @@ create-repository.txt
 credentials.txt
   Credentials - caching and storing
 
+delete-file-from-repo.txt
+  Delete and truly remove files from git repository
+
 diff.txt
   Diff
   See differences with diff or nothing if there are no differences.
