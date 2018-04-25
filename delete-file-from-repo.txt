@@ -1,0 +1,53 @@
+delete-file-from-repo.txt
+Created Wed Apr 25 08:49:10 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Delete file from repo
+
+
+I had added the 605M FreeNAS-11.1-U4.iso to the 
+git/storage/freenas repository.  When I tried to 
+push it to github I got a 100M max file size error.
+
+Deleting FreeNAS-11.1-U4.iso from the freenas repository
+did not truly remove it.  Hence the use of
+'git filter-branch' command to truly remove it from the 
+repository.
+
+$ git filter-branch --force --index-filter \
+'git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA' \
+--prune-empty --tag-name-filter cat -- --all
+Rewrite 48dc599c80e20527ed902928085e7861e6b3cbe6 (266/266)
+Ref 'refs/heads/master' was rewritten
+
+
+
+
+Links
+=====
+BFG Repo-Cleaner
+Removes large or troublesome blobs like git-filter-branch does,
+but faster.  And  written in scala.
+The BFG is a simpler, faster alternative to git-filter-branch
+for cleansing bad data out of your Git repository history:
+o Removing Crazy Big Files
+o Removing Passwords, Credentials & other Private data
+Requirements: The Java Runtime Environment (Java 7 or above
+- BFG v1.12.3 was the last version to support Java 6)
+https://rtyley.github.io/bfg-repo-cleaner/
+
+How to remove unwanted files from your Git repository
+2 August 2016
+https://torchbox.com/blog/how-remove-unwanted-files-your-git-repository/
+
+Remove a large committed file from your Git repository.
+Uses rebase command
+https://gist.github.com/brunogrande/7735d22a6fdd03b0ccd64841a7bfc57e
+
+Removing sensitive data from a repository
+https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+
+Understanding Git Filter-branch and the Git Storage Model
+https://manishearth.github.io/blog/2017/03/05/understanding-git-filter-branch/
+
