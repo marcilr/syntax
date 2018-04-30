@@ -56,23 +56,8 @@ rmdir .git
 git config --bool core.bare true
 cd ..; mv repo repo.git # renaming just for clarity
 
-	
-In short: replace the contents of repo with the contents of repo/.git,
-then tell the repository that it is now a bare repository.
-
-To do this, execute the following commands:
-
-cd repo
-mv .git .. && rm -fr *
-mv ../.git .
-mv .git/* .
-rmdir .git
-
-git config --bool core.bare true
-cd ..; mv repo repo.git # renaming just for clarity
-
-Note that this is different from doing a git clone --bare to a new location
-(see below).
+Note that this is different from doing a git clone --bare
+to a new location (see below).
 
 That rm command may need * \.[!.]* rather than * in order to remove dot-files
 and dot-directories. - minopret Aug 27 '12 at 18:25
