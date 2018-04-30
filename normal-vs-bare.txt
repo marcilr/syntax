@@ -25,10 +25,10 @@ One solution is to run the following command:
   git config receive.denyCurrentBranch ignore
 
 After this it works, but I would like to know why I need to use this option.
-Is this the only option? What are the consequences of doing this?
+Is this the only option?  What are the consequences of doing this?
 
 This worked for the /data/git/gci/* repos on htpc.
-i.e. After doing this, for each repo, could gti push to them from
+i.e. After doing this, for each repo, could git push to them from
 GCI Network Services, OSS covellite Debian jessie 8.3 amd64 workstation.
 
 --stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git
@@ -36,9 +36,9 @@ GCI Network Services, OSS covellite Debian jessie 8.3 amd64 workstation.
 
 You should really just push to bare Git repositories
 ====================================================
-As pointed out in some[1] of the other answers[1], you shouldn't really be pushing
-to a non-bare repository, for the reasons I pointed out above, and which Git
-itself is telling you.
+As pointed out in some[1] of the other answers[1], you shouldn't really be
+pushing to a non-bare repository, for the reasons I pointed out above, and
+which Git itself is telling you.
 --stackoverflow.com/questions/12265729/what-are-the-consequences-of-using-receive-denycurrentbranch-in-git
 
 
