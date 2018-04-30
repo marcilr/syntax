@@ -47,14 +47,14 @@ tell the repository that it is now a bare repository.
 
 To do this, execute the following commands:
 
-cd repo
-mv .git .. && rm -fr *
-mv ../.git .
-mv .git/* .
-rmdir .git
+  cd repo
+  mv .git .. && rm -fr *
+  mv ../.git .
+  mv .git/* .
+  rmdir .git
 
-git config --bool core.bare true
-cd ..; mv repo repo.git # renaming just for clarity
+  git config --bool core.bare true
+  cd ..; mv repo repo.git   # renaming just for clarity
 
 Note that this is different from doing a git clone --bare
 to a new location (see below).
