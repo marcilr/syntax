@@ -2,11 +2,19 @@ view.txt
 Created Mon Mar  5 10:27:45 AKST 2018
 Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
 
+
 View Branches
 
 
-To view all branches:
+To view current select branch
+=============================
+$ git branch
+* master
+$
 
+
+To view all branches
+====================
 $ git branch -a
 * master
   remotes/origin/HEAD -> origin/master
