@@ -1,0 +1,17 @@
+checkout.txt
+Created Tue May  8 10:27:00 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+checkout 
+
+
+Checkout a specific branch
+
+
+Example
+=======
+psap$ git checkout develop
+Branch develop set up to track remote branch develop from origin.
+Switched to a new branch 'develop'
+psap$
