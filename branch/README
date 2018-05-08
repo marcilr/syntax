@@ -25,6 +25,9 @@ branching.txt
   tool and can literally change the way that you develop.
   --https://git-scm.com/book/en/v1/Git-Branching
 
+checkout.txt
+  Checkout a specific branch
+
 create.txt
   Create a new branch
 
