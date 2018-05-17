@@ -13,7 +13,7 @@ origin	ssh://htpc/data/git/hosts/gci/covellite/home/marcilr/Desktop/Desktop (pus
 Desktop$ 
 
 NOTE: The above url for Desktop no longer exists.  It has been migrated to
-      htpc:/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop/
+      htpc:/data/git/gci/Desktop/Desktop/
 
 2. Remove old origin:
 
@@ -25,17 +25,24 @@ Prior origin removed.
 
 3. Add origin:
 
-Desktop$ git remote add origin ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop
+Desktop$ git remote add origin ssh://htpc/data/git/gci/Desktop/Desktop/
 Desktop$ 
 
-$ git remote -v
-origin	ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop (fetch)
-origin	ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop (push)
-$ 
+$ git remote -v origin ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop (push) $
+origin	ssh://htpc/data/git/gci/Desktop/Desktop/ (fetch)
+origin	ssh://htpc/data/git/gci/Desktop/Desktop/ (push)
+$
 
 $ git pull origin master
+From ssh://htpc/data/git/gci/Desktop/Desktop
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Already up-to-date.
+$
+
 $ git push
 Everything up-to-date
-$
+$ 
+
 
 Looks good!
