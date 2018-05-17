@@ -35,6 +35,9 @@ show-remotes.txt
   Show remotes
   Use 'git remote -v' to show URLS of repo's remotes.
 
+update.txt
+  Updated remote origin
+
 working-with-remotes.txt
   2.5 Git Basics - Working with Remotes
   Working with Remotes
