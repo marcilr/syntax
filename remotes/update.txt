@@ -1,0 +1,41 @@
+update.txt
+Created Thu May 17 09:27:59 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Updated remote origin
+
+
+1. List current origin or remote:
+Desktop$ git remote -v
+origin	ssh://htpc/data/git/hosts/gci/covellite/home/marcilr/Desktop/Desktop (fetch)
+origin	ssh://htpc/data/git/hosts/gci/covellite/home/marcilr/Desktop/Desktop (push)
+Desktop$ 
+
+NOTE: The above url for Desktop no longer exists.  It has been migrated to
+      htpc:/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop/
+
+2. Remove old origin:
+
+Desktop$ git remote rm origin
+Desktop$ git remote -v
+Desktop$ 
+
+Prior origin removed.
+
+3. Add origin:
+
+Desktop$ git remote add origin ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop
+Desktop$ 
+
+$ git remote -v
+origin	ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop (fetch)
+origin	ssh://htpc/data/git/gci/hosts/covellite/home/marcilr/Desktop/Desktop (push)
+$ 
+
+$ git pull origin master
+$ git push
+Everything up-to-date
+$
+
+Looks good!
