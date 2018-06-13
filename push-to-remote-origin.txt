@@ -1,0 +1,53 @@
+push-to-remote-origin.txt
+Created Wed Jun 13 09:19:22 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Push to remote origin
+
+
+1. View current origin:
+
+$ git remote -v
+origin	ssh://htpc/data/git/gci/filexfer/filexfer (fetch)
+origin	ssh://htpc/data/git/gci/filexfer/filexfer (push)
+$ 
+
+2. Delete current origin:
+
+$ git remote rm origin
+$
+
+3. Add new remote origin:
+
+$ git remote add origin ssh://git@source.gci.com/nit/filexfer-docs
+$ git remote -v
+origin	ssh://git@source.gci.com/nit/filexfer-docs (fetch)
+origin	ssh://git@source.gci.com/nit/filexfer-docs (push)
+$ 
+
+4. Push to new remote repo (created on bitbucket):
+
+$ git push -u origin master
+Counting objects: 1807, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (787/787), done.
+Writing objects: 100% (1807/1807), 961.04 KiB | 0 bytes/s, done.
+Total 1807 (delta 1078), reused 1645 (delta 972)
+To ssh://source.gci.com/nit/filexfer-docs
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+$
+
+5. Test checkout of new bitbucket repo:
+
+$ git clone ssh://git@source.gci.com/nit/filexfer-docs filexfer-docs
+Cloning into 'filexfer-docs'...
+remote: Counting objects: 1807, done.
+remote: Compressing objects: 100% (681/681), done.
+remote: Total 1807 (delta 1078), reused 1807 (delta 1078)
+Receiving objects: 100% (1807/1807), 961.04 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (1078/1078), done.
+$
+
+That did the trick!
