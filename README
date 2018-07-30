@@ -5,6 +5,9 @@ Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+00INSTALL/
+  Installation of git on Debian 9.5 amd64
+
 add.txt
   Add to repository
 
