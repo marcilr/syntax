@@ -83,6 +83,26 @@ Switched to branch 'reorg'
 covellite:~/stash/filexfer$ 
 
 
+Example
+-------
+Create dev branch of the psap project:
+
+$ git checkout -b dev
+Switched to a new branch 'dev'
+$
+
+Push dev branch upstream:
+$ git push --set-upstream origin dev
+
+Check branches:
+$ git branch
+* dev
+  master
+$
+
+Looks good.
+
+
 Switch Branch
 =============
 Use 'git checkout <branch>' to change branch.
