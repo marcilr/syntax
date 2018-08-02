@@ -139,6 +139,9 @@ merge-fatal-cannot-do-a-partial-commit-during-a-merge.txt
 merge-your-pull-request.txt
   Merge your Pull Request
 
+migrate-repo.txt
+  Working on the migration of work repositories to proper location.
+
 normal-vs-bare.txt
   Normal vs. bare repositories
 
