@@ -28,6 +28,9 @@ branching.txt
 checkout.txt
   Checkout a specific branch
 
+commands.txt
+  Commands in git
+
 create.txt
   Create a new branch
 
