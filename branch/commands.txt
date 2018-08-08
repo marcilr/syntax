@@ -1,0 +1,30 @@
+commands.txt
+Created Wed Aug  8 14:23:24 AKDT 2018
+by Raymond E. Marcil <rmarcil@gci.com>
+
+
+Commands in git:
+
+
+View current branch
+===================
+$ cd psap
+$ git branch
+* master
+$
+
+Checkout dev branch
+===================
+$ git checkout dev
+Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+Switched to a new branch 'dev'
+$
+
+$ git branch
+* dev
+  master
+$
+
+Looks good.
+
+
