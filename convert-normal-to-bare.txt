@@ -1,0 +1,51 @@
+convert-normal-to-bare.txt
+Created Wed Aug 15 15:45:31 AKDT 2018
+Copyright (C) 2018 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Convert a normal Git repository to a bare one
+
+
+The main difference seems to be:
+o in the normal git repository you have a .git folder inside the
+  repository containing all relevant data and all other files build
+  your working copy
+
+o in a bare Git repository, there is no working copy and the folder
+  (let's call it repo.git) contains the actual repository data
+
+
+
+In short: replace the contents of repo with the contents of repo/.git,
+then tell the repository that it is now a bare repository.
+
+To do this, execute the following commands:
+
+cd repo
+mv .git ../repo.git # renaming just for clarity
+cd ..
+rm -fr repo
+cd repo.git
+git config --bool core.bare true
+--answered Feb 4 '10 at 15:06
+  Jörg W Mittag
+
+Thank you! This seems cleaner to me:
+  mv repo/.git repo.git && rm -rf repo && \
+  cd repo.git && git config --bool core.bare true 
+  --JasonWoof Jun 21 '12 at 9:43
+
+
+NOTE: git clone --bare /path/to/repo
+      Wrong, this method is not the equivalent. Doing a clone doesn't 
+      preserve config options, which can be critical to proper operation 
+      such as if you use git-p4.  Additionally, a clone destroys remotes,
+      again with something like git-p4 you lose the p4/master branch when
+      you clone, so the above approach is preferable.
+      – nosatalian Apr 21 '10 at 2:00
+
+
+Links
+=====
+How to convert a normal Git repository to a bare one?
+https://stackoverflow.com/questions/2199897/how-to-convert-a-normal-git-repository-to-a-bare-one
