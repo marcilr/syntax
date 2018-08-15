@@ -51,6 +51,10 @@ commit.txt
 config.txt
   The git config modifies the .git/config file.
 
+convert-normal-to-bare.txt
+  How to convert a normal Git repository to a bare one?
+  https://stackoverflow.com/questions/2199897/how-to-convert-a-normal-git-repository-to-a-bare-one
+
 create-repository.txt
   Create repository
   https://guides.github.com/activities/hello-world/
