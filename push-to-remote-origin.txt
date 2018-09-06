@@ -20,6 +20,14 @@ $
 
 3. Add new remote origin:
 
+$ git remote add origin ssh://git@github.com:marcilr/lions
+$ git remote -v
+origin  ssh://git@github.com:marcilr/lions (fetch)
+origin  ssh://git@github.com:marcilr/lions (push)
+$
+
+  OR
+
 $ git remote add origin ssh://git@source.gci.com/nit/filexfer-docs
 $ git remote -v
 origin	ssh://git@source.gci.com/nit/filexfer-docs (fetch)
